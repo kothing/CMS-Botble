@@ -1,0 +1,15 @@
+body,
+html {
+    height: 100%;
+}
+
+.rv-media-wrapper {
+    * {
+        @include lib-css(border-radius, 0 !important);
+    }
+
+    a {
+        color: $color-secondary;
+        text-decoration: none;
+    }
+}

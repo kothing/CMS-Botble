@@ -1,0 +1,21 @@
+{
+    "name": "botble/widget-generator",
+    "description": "Widget generator",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\WidgetGenerator\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev",
+        "botble/widget": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\WidgetGenerator\\Providers\\WidgetGeneratorServiceProvider"
+            ]
+        }
+    }
+}

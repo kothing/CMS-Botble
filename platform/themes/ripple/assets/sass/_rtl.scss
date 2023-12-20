@@ -1,0 +1,80 @@
+body[dir=rtl] {
+    .widget--transparent {
+        .widget__header {
+            &:after {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .post-group {
+        .post-group__title {
+            &:after {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .widget__about {
+        .person-detail {
+            i {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .header {
+        .header-wrap {
+            .nav-top {
+                ul {
+                    li {
+                        a {
+                            i {
+                                margin-right: 0;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .language-wrapper {
+        .language_bar_list {
+            li {
+                a {
+                    img {
+                        margin-right: 0;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .post--single .post__relate-group.post__relate-group--right .relate__title:after {
+        left: 0;
+        right: auto;
+    }
+
+    .post--single .post__relate-group .relate__title:after {
+        right: 0;
+        left: auto;
+    }
+
+    .header {
+        .header-wrap {
+            .nav-top {
+                .hi-icon-wrap {
+                    a {
+                        margin-left: 0;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

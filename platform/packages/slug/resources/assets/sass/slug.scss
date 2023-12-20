@@ -1,0 +1,63 @@
+#edit-slug-box {
+    line-height: 24px;
+    min-height: 25px;
+    margin-top: 5px;
+}
+
+#change_slug, #btn-ok, .btn-preview {
+    height: 24px;
+    line-height: 22px !important;
+    padding: 0 8px 1px !important;
+    font-size: 11px !important;
+    vertical-align: top;
+    margin: 0;
+}
+
+#change_slug, #btn-ok {
+    color: #555555 !important;
+    border-color: #cccccc;
+    background: #f7f7f7;
+}
+
+.btn-preview {
+    margin-left: 10px;
+    color: #fff !important;
+}
+
+.permalink {
+    text-decoration: underline;
+}
+
+#editable-post-name {
+    font-weight: 700;
+}
+
+#editable-post-name input {
+    font-size: 13px;
+    font-weight: 400;
+    height: 22px;
+    margin: 0;
+    width: 16em;
+    display: inline-block;
+}
+
+#edit-slug-box .cancel {
+    padding: 0;
+    font-size: 11px;
+    text-decoration: underline;
+    color: #0073aa;
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: 0 0;
+    outline: 0;
+    cursor: pointer;
+    display: none;
+}
+
+#btn-ok {
+    display: none;
+}

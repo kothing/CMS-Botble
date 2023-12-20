@@ -1,0 +1,55 @@
+:has(> .guideline-edit-link) {
+    position: relative;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: -1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .guideline-edit-link {
+        opacity: 0;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1048;
+        background-color: #0dcaf0;
+        border: 1px solid #81e3fc;
+        border-radius: 50%;
+        padding: 4px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+
+        svg {
+            width: 12px;
+            height: 12px;
+            color: #ffffff;
+        }
+    }
+
+    &:hover {
+        & > .guideline-edit-link {
+            opacity: 1;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 8px rgb(0 0 0 / 0.2);
+            }
+        }
+    }
+
+    &:has(> .guideline-edit-link:hover) {
+        &:after {
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1047;
+        }
+    }
+}

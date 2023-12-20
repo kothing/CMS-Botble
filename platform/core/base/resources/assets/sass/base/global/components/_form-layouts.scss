@@ -1,0 +1,204 @@
+/***
+Form Layouts
+****/
+
+/* Help blocks */
+
+.help-block {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.help-inline {
+    font-size: 13px;
+    color: #737373;
+    display: inline-block;
+    padding: 5px;
+}
+
+.form-inline {
+    input {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Control Label */
+
+.control-label {
+    margin-top: 1px;
+    font-weight: normal;
+}
+
+.form {
+    padding: 0 !important;
+}
+
+.portlet-form,
+.form {
+    .form-body {
+        padding: 20px;
+
+        .portlet.light & {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .form-actions {
+        padding: 20px 20px;
+        margin: 0;
+        background-color: #f5f5f5;
+
+        border-top: 1px solid $general-panel-border-color;
+
+        *zoom: 1;
+
+        .portlet.light & {
+            background: none;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &.noborder {
+            border-top: 0;
+        }
+
+        .portlet & {
+            @include border-radius(0 0 $general-border-radius $general-border-radius);
+        }
+
+        @include clearfix();
+
+        &.right {
+            padding-left: 0;
+            padding-right: 20px;
+            text-align: right;
+
+            .portlet.light & {
+                padding-right: 0;
+            }
+        }
+
+        &.left {
+            padding-left: 20px;
+            padding-right: 0;
+            text-align: left;
+
+            .portlet.light & {
+                padding-left: 0;
+            }
+        }
+
+        &.nobg {
+            background-color: transparent;
+        }
+
+        &.top {
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-top: 0;
+
+            border-bottom: 1px solid $general-panel-border-color;
+
+            .portlet.light & {
+                background: none;
+            }
+        }
+
+        .btn-set {
+            display: inline-block;
+        }
+
+        @media (max-width: $screen-xs-max) { /* 767px */
+            .btn-set {
+                margin-bottom: 3px;
+                margin-top: 3px;
+                float: left !important;
+            }
+        }
+    }
+
+    .form-section {
+        margin: 30px 0 30px 0;
+        padding-bottom: 5px;
+
+        .form-fit & {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        border-bottom: 1px solid $general-panel-border-color;
+    }
+}
+
+/* Checkboxes */
+
+.checkbox,
+.form-horizontal .checkbox {
+    padding: 0;
+
+    > label {
+        padding-left: 0;
+    }
+}
+
+.checkbox-list > label {
+    display: block;
+
+    &.checkbox-inline {
+        display: inline-block;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+/* Radio buttons */
+
+.radio-list > label {
+    display: block;
+
+    &.radio-inline {
+        display: inline-block;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+/* Radio buttons in horizontal forms */
+
+.form-horizontal {
+
+    .radio-list {
+        .radio {
+            padding-top: 1px;
+        }
+
+        > label {
+            margin-bottom: 0;
+        }
+    }
+
+    .radio {
+        > span {
+            margin-top: 2px;
+        }
+    }
+}
+
+/* Horizontal form small input issue */
+
+.form-horizontal {
+    .form-group {
+        .input-sm {
+            margin-top: 3px;
+        }
+
+        .form-control-static {
+            margin-top: 1px;
+        }
+    }
+}

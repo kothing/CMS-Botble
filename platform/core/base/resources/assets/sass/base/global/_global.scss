@@ -1,0 +1,35 @@
+// Global settings
+@import '~bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'components/mixins';
+// General CSS Reset
+@import 'components/reset-general';
+// Material Design Components
+@import 'components/md';
+// General Components
+@import 'components/typography';
+@import 'components/utils';
+@import 'components/grid';
+@import 'components/font-icons';
+@import 'components/badges';
+@import 'components/buttons';
+@import 'components/dropdowns';
+@import 'components/form-layouts';
+@import 'components/inputs';
+@import 'components/input-icons';
+@import 'components/labels';
+@import 'components/list-groups';
+@import 'components/loaders';
+@import 'components/notes';
+@import 'components/panels';
+@import 'components/popovers';
+@import 'components/portlets';
+@import 'components/progress-bars';
+@import 'components/tabs';
+// Apply flat UI colors to all components
+@import 'components/colors';
+// System components
+@import 'components/sidebar';
+@import 'components/card';
+@import 'components/overlay';
+@import 'components/social-icons';

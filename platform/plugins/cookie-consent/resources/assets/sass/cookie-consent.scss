@@ -1,0 +1,120 @@
+.cookie-consent {
+    background-color: #000 !important;
+    padding: 10px 40px !important;
+    color: #fff !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+
+    &.cookie-consent-minimal {
+        bottom: 1em;
+        left: 1em;
+        padding: 1.2em !important;
+        border-radius: 5px;
+        max-width: 24em;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+
+        .cookie-consent__message {
+            display: block;
+            height: auto !important;
+            line-height: 26px !important;
+            text-align: left;
+        }
+
+        .cookie-consent__agree {
+            float: none;
+            margin-top: 5px;
+        }
+    }
+
+    .cookie-consent-body {
+        max-width: 1170px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .cookie-consent__message {
+        height: 32px !important;
+        line-height: 32px !important;
+
+        a {
+            color: #fff !important;
+            text-decoration: underline;
+        }
+    }
+
+    .cookie-consent__agree {
+        float: right;
+        padding: 5px 10px !important;
+        border-radius: 0 !important;
+        outline: none !important;
+        background: #000 !important;
+        color: #fff !important;
+        border: 1px solid #fff !important;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background: #fff !important;
+            color: #000 !important;
+        }
+    }
+}
+
+body[dir="rtl"] {
+    .cookie-consent {
+        &.cookie-consent-minimal {
+            right: 1em;
+            .cookie-consent__agree {
+                float: none;
+            }
+        }
+
+        .cookie-consent__agree {
+            float: left;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cookie-consent {
+        &.cookie-consent-minimal {
+            max-width: none;
+            right: 1em;
+        }
+
+        .cookie-consent-body {
+            text-align: center;
+
+            .cookie-consent__message {
+                line-height: 25px !important;
+                display: block;
+                height: auto !important;
+            }
+
+            .cookie-consent__agree {
+                float: none;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    body[dir="rtl"] {
+        .cookie-consent {
+
+            .cookie-consent__agree {
+                float: none;
+            }
+        }
+    }
+}

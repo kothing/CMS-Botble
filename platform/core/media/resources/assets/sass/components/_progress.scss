@@ -1,0 +1,25 @@
+.rv-media-container {
+    .progress {
+        box-shadow: none;
+        height: 10px;
+        margin: 0;
+    }
+
+    .progress-bar {
+        &-warning {
+            background-color: $color-warning;
+        }
+
+        &danger {
+            background-color: $color-danger;
+        }
+
+        &-success {
+            background-color: $color-success;
+        }
+
+        &-info {
+            background-color: $color-info;
+        }
+    }
+}

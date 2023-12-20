@@ -1,0 +1,65 @@
+.ld-version-tag {
+    background-color: #f5716c;
+}
+
+.bs-callout {
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+    border: 1px solid #eeeeee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout p {
+    margin: 0 0 10px 0;
+}
+
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+
+.fa-check {
+    color: #7ad03a;
+}
+
+.fa-times {
+    color: red;
+}
+
+.panel-title {
+    font-weight: 600;
+}
+
+#system_management {
+    border: 1px solid #dddddd !important;
+}
+
+#system_management th {
+    color: #757575;
+}
+
+#system_management td {
+    text-align: left;
+    padding: 5px 0;
+}
+
+#system_management td ul li {
+    margin-bottom: 5px;
+}
+
+#system_management span.highlight {
+    background-color: #fff176;
+    border-radius: 0.28571429rem;
+}
+
+#txt-report {
+    margin: 10px 0;
+}
+
+#report-wrapper {
+    display: none;
+}

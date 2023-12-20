@@ -1,0 +1,20 @@
+{
+    "name": "botble/revision",
+    "description": "Revision package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\Revision\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Revision\\Providers\\RevisionServiceProvider"
+            ]
+        }
+    }
+}

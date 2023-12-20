@@ -1,0 +1,106 @@
+// Theme Colors Settings
+
+// Main settings
+$theme-name: 'blue';
+$brand-main-color: #d64635 !default;
+$brand-main-font-color: #ffffff !default;
+
+// Body and header
+$bg-color: #4276a4 !default;
+$header-bg-color: #2d5f8b !default;
+$header-toggler-color: lighten($header-bg-color, 50%) !default;
+$header-toggler-bg-color: darken($bg-color, 5%) !default;
+
+// Top menu
+$header-top-menu-bg-hover-color: lighten($header-bg-color, 10%) !default;
+$header-top-menu-bg-hover-color-on-dropdown-open: lighten($header-bg-color, 10%) !default;
+$header-top-menu-badge-bg-color: $brand-main-color;
+$header-top-menu-badge-font-color: #ffffff;
+$header-top-menu-icon-font-color: #6ba1d1 !default;
+
+// Top menu user bar
+$header-top-menu-user-font-color: lighten($header-bg-color, 45%) !default;
+$header-top-menu-user-bg-color: darken($header-bg-color, 4%) !default;
+
+// begin: Top Menu Extended Dropdowns
+$header-top-menu-extended-dropdown-item-bg-color-on-hover: #f8f9fa;
+$header-top-menu-extended-dropdown-item-border-color: #eff2f6;
+$header-top-menu-extended-dropdown-item-font-color: #888888;
+
+$header-top-menu-extended-dropdown-header-bg-color: darken(#f7f8fa, 4%);
+$header-top-menu-extended-dropdown-border-color: darken($header-top-menu-extended-dropdown-header-bg-color, 1%);
+$header-top-menu-extended-dropdown-header-font-color: darken(#6f949c, 5%);
+
+$header-top-menu-inbox-dropdown-from-font-color: #5b9bd1;
+
+$header-top-menu-task-dropdown-progress-bg-color: #dfe2e9;
+
+$header-top-menu-notification-time-bg-color: lighten(#eeeeee, 1%);
+
+// Top Menu Notifications
+$header-top-menu-dropdown-dark-bg-color: lighten($header-bg-color, 10%);
+$header-top-menu-dropdown-dark-header-bg-color: lighten($header-bg-color, 2%);
+$header-top-menu-dropdown-dark-header-font-color: lighten($header-top-menu-dropdown-dark-header-bg-color, 50%);
+
+$header-top-menu-dropdown-dark-item-font-color: lighten($header-top-menu-dropdown-dark-header-bg-color, 55%);
+$header-top-menu-dropdown-dark-item-border-color: lighten($header-top-menu-dropdown-dark-bg-color, 6%);
+$header-top-menu-dropdown-dark-item-icon-color: lighten($header-top-menu-dropdown-dark-header-bg-color, 45%);
+$header-top-menu-dropdown-dark-item-bg-color-on-hover: lighten($header-top-menu-dropdown-dark-bg-color, 4%);
+
+$header-top-menu-dropdown-dark-default-menu-divider: $header-top-menu-dropdown-dark-item-border-color;
+$header-top-menu-dropdown-dark-notification-time-bg-color: darken($header-top-menu-dropdown-dark-bg-color, 5%);
+//end: Top Menu Extended Dropdowns
+
+// Sidebar menu
+$sidebar-menu-deliver-border-color: lighten($bg-color, 5%) !default;
+
+$sidebar-menu-link-font-color: #c9dff5 !default;
+$sidebar-menu-link-font-color-on-hover: $sidebar-menu-link-font-color !default;
+$sidebar-menu-link-font-color-on-active: #ffffff !default;
+
+$sidebar-menu-link-icon-font-color: #8eb8de !default;
+$sidebar-menu-link-icon-font-color-on-active: $sidebar-menu-link-font-color-on-active !default;
+$sidebar-menu-link-icon-font-color-on-hover: #d2e6f9 !default;
+
+$sidebar-menu-link-bg-color-on-hover: #497fae !default;
+$sidebar-menu-link-bg-color-on-active: $brand-main-color;
+
+$sidebar-menu-arrow-color: $sidebar-menu-link-icon-font-color !default;
+$sidebar-menu-arrow-color-on-active: $sidebar-menu-link-font-color-on-active !default;
+$sidebar-menu-arrow-color-on-hover: $sidebar-menu-link-icon-font-color-on-hover !default;
+
+$sidebar-menu-sub-menu-box-shadow-color: $sidebar-menu-link-bg-color-on-hover !default;
+$sidebar-menu-sub-menu-link-font-color: #c9dff5 !default;
+$sidebar-menu-sub-menu-link-icon-font-color: $sidebar-menu-arrow-color !default;
+$sidebar-menu-sub-menu-link-bg-color-on-hover: #397fae !default;
+$sidebar-menu-sub-menu-link-icon-font-color-on-hover: $sidebar-menu-link-icon-font-color-on-hover !default;
+
+$sidebar-menu-hover-sub-menu-bg-color: darken($sidebar-menu-link-bg-color-on-hover, 8%) !default;
+
+// Sidebar for mobile
+$mobile-sidebar-menu-bg-color: darken($bg-color, 12%) !default;
+$mobile-sidebar-menu-link-bg-color-on-hover: darken($bg-color, 8%) !default;
+
+// Light sidebar menu
+$light-sidebar-menu-link-border-color: $brand-main-color !default;
+$light-sidebar-menu-link-bg-color-on-hover: darken($bg-color, 4%) !default;
+$light-sidebar-menu-link-bg-color-on-active: darken($bg-color, 7%) !default;
+$light-sidebar-menu-link-font-color-on-active: #f1f1f1 !default;
+$light-sidebar-menu-link-icon-color-on-active: #eeeeee !default;
+$light-sidebar-menu-link-arrow-color-on-active: #eeeeee !default;
+
+$light-sidebar-menu-sub-menu-bg-color: lighten($bg-color, 3%) !default;
+$light-sidebar-menu-sub-menu-link-bg-color-on-hover: darken($bg-color, 4%) !default;
+
+$mobile-light-sidebar-menu-sub-menu-bg-color: $mobile-sidebar-menu-bg-color !default;
+$mobile-light-sidebar-menu-link-bg-color-on-hover: lighten($mobile-sidebar-menu-bg-color, 3%) !default;
+$mobile-light-sidebar-menu-link-bg-color-on-active: lighten($mobile-sidebar-menu-bg-color, 3%) !default;
+$mobile-light-sidebar-menu-sub-menu-link-bg-color-on-hover: lighten($mobile-sidebar-menu-bg-color, 3%) !default;
+
+// Footer
+$footer-default-font-color: lighten($bg-color, 40%) !default;
+$footer-default-go-top-bg-color: lighten($bg-color, 7%) !default;
+$footer-default-go-top-icon-font-color: lighten($bg-color, 30%) !default;
+$footer-fixed-bg-color: darken($bg-color, 7%) !default;
+
+@import '../base';

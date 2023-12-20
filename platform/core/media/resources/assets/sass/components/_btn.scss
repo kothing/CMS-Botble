@@ -1,0 +1,50 @@
+.rv-media-container {
+    .btn {
+        border-radius: 0;
+        font-size: 13px;
+
+        &:not(.btn-link) {
+            @include lib-css(box-shadow, inset 0 -2px 0 rgba(0, 0, 0, .15));
+        }
+
+        &-success {
+            background-color: $color-success;
+            border-color: $color-success;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $color-secondary;
+                border-color: $color-secondary;
+            }
+        }
+
+        &-primary {
+            background-color: $color-blue;
+            border-color: $color-blue;
+        }
+
+        &-danger {
+            background-color: $color-danger;
+            border-color: $color-danger;
+        }
+
+        &-info {
+            background-color: $color-info;
+            border-color: $color-info;
+        }
+
+        &-warning {
+            background-color: $color-warning;
+            border-color: $color-warning;
+        }
+
+        &.disabled {
+            color: #333333;
+            background-color: #ffffff;
+            border-color: #cccccc;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "Home": "Home",
+    "Page could not be found": "Page could not be found",
+    "This may have occurred because of several reasons": "This may have occurred because of several reasons",
+    "The page you requested does not exist.": "The page you requested does not exist.",
+    "The link you clicked is no longer.": "The link you clicked is no longer.",
+    "The page may have moved to a new location.": "The page may have moved to a new location.",
+    "An error may have occurred.": "An error may have occurred.",
+    "You are not authorized to view the requested resource.": "You are not authorized to view the requested resource.",
+    "Page could not be loaded": "Page could not be loaded",
+    "Service Unavailable": "Service Unavailable",
+    "Sorry, we are doing some maintenance. Please check back soon.": "Sorry, we are doing some maintenance. Please check back soon.",
+    "Oh no": "Oh no",
+    "Please try again in a few minutes, or alternatively return to the homepage by <a href=\":link\">clicking here</a>.": "Please try again in a few minutes, or alternatively return to the homepage by <a href=\":link\">clicking here</a>."
+}

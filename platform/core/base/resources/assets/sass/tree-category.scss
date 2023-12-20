@@ -1,0 +1,123 @@
+.file-tree-wrapper {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 15px;
+
+    > ul {
+        margin-left: 20px;
+    }
+
+    .file-list, .file-list ul {
+        list-style-type: none;
+        font-size: 1em;
+        line-height: 1.8em;
+        margin-left: 10px;
+        padding-left: 8px;
+        border-left: 1px dotted var(--gray-dark);
+    }
+
+    .file-list {
+
+        li {
+            position: relative;
+            padding-left: 12px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+            a {
+                text-decoration: none;
+
+                &.category-name {
+                    &:before {
+                        display: block;
+                        content: " ";
+                        width: 14px;
+                        height: 1px;
+                        position: absolute;
+                        border-bottom: 1px dotted var(--gray-dark);
+                        top: 13px;
+                        left: -6px;
+                    }
+
+                    &.active {
+                        font-weight: 700;
+
+                        ~ .deleteDialog {
+                            display: inline-block;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .folder-root {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    li.folder-root ul {
+        transition: all .3s ease-in-out;
+    }
+
+    li.folder-root.closed ~ ul, li.folder-root.closed > ul {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    li.folder-root.open ~ ul, li.folder-root.open > ul {
+        opacity: 1;
+        display: block;
+    }
+
+    .file-opener-i {
+        position: absolute;
+        left: -22px;
+        top: 4px;
+        z-index: 1;
+        background: var(--white);
+        margin: 2px;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+
+    .file-tree li, .file-tree a {
+        white-space: nowrap;
+    }
+
+    .file-tree li, .file-tree a {
+        white-space: nowrap;
+    }
+
+    .file-list .deleteDialog {
+        padding: 2px;
+        display: none;
+    }
+}
+
+.tree-loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1005;
+}
+
+.tree-form-body {
+    .widget {
+        border: 1px solid #ced4da;
+    }
+}

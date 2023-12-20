@@ -1,0 +1,58 @@
+.rv-media-container {
+    .input-group {
+        .btn,
+        .form-control {
+            height: 34px;
+        }
+    }
+
+    .custom-checkbox {
+        position: relative;
+
+        label {
+            margin: 0;
+            display: block;
+            cursor: pointer;
+        }
+
+        input {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba($color-black, 0.5);
+            display: block;
+            position: relative;
+            border-radius: 2px;
+
+            &:before {
+                content: $fa-var-check;
+                font-family: $font-awesome;
+                font-size: 0;
+                font-weight: 600;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: $color-secondary;
+                @include lib-css(transform, translate(-50%, -50%));
+                @include lib-css(transition, all 0.3s ease-in-out);
+            }
+        }
+
+        input:checked + span {
+            border: 2px solid $color-secondary;
+
+            &:before {
+                font-size: 13px;
+            }
+        }
+    }
+}

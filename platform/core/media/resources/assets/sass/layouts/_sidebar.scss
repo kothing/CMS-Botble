@@ -1,0 +1,107 @@
+.rv-media-aside {
+    position: relative;
+    width: 200px;
+    min-width: 200px;
+    background-color: $color-sidebar;
+    @include lib-css(transition, all 0.3s ease-in-out);
+
+    .rv-media-block-title {
+        color: $color-white;
+    }
+
+    .collapse-sidebar {
+        margin: 0;
+        height: 43px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.2);
+        color: $color-white;
+        border-left: 2px solid rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            border-left: 2px solid $color-orange;
+        }
+
+        .icon {
+            line-height: 40px;
+
+            &:before {
+                display: inline-block;
+                font-size: 16px;
+                @include lib-css(transform, rotate(-180deg));
+            }
+        }
+    }
+}
+
+.rv-media-aside-list {
+    list-style: none;
+    margin: 0 -15px;
+    padding: 15px 0 0 0;
+    font-size: 14px;
+
+    li {
+        margin-bottom: 1px;
+
+        &.active a,
+        a:hover,
+        a:active,
+        a:focus {
+            background-color: rgba($color-black, 0.2);
+            border-left: 2px solid $color-secondary;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 13px;
+        display: block;
+        padding: 5px 15px;
+        border-left: 2px solid transparent;
+        @include lib-css(transition, all 0.3s ease-in-out);
+    }
+
+    i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+
+.rv-media-aside-bottom {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media (min-width: $screen-md-min) {
+    .collapse-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .rv-media-aside {
+        position: fixed;
+        top: 0;
+        left: -200px;
+        height: 100%;
+        z-index: 10;
+
+        #media_aside_collapse:checked ~ & {
+            left: 0;
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .rv-media-aside {
+        &.rv-media-aside-hide-desktop {
+            display: none;
+        }
+    }
+}

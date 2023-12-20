@@ -1,0 +1,21 @@
+{
+    "name": "botble/theme-generator",
+    "description": "Theme generator",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\ThemeGenerator\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev",
+        "botble/theme": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\ThemeGenerator\\Providers\\ThemeGeneratorServiceProvider"
+            ]
+        }
+    }
+}

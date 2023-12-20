@@ -1,0 +1,10 @@
+{
+    "id": "botble/language",
+    "name": "Language",
+    "namespace": "Botble\\Language\\",
+    "provider": "Botble\\Language\\Providers\\LanguageServiceProvider",
+    "author": "Botble Technologies",
+    "url": "https://botble.com",
+    "version": "2.2.0",
+    "description": "Multi-language features."
+}

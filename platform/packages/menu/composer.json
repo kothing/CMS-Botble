@@ -1,0 +1,24 @@
+{
+    "name": "botble/menu",
+    "description": "Menu package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\Menu\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev",
+        "botble/theme": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Menu\\Providers\\MenuServiceProvider"
+            ],
+            "aliases": {
+                "Menu": "Botble\\Menu\\Facades\\Menu"
+            }
+        }
+    }
+}

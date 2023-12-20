@@ -1,0 +1,62 @@
+.settings {
+    .header {
+        height: 38px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:before, &:after {
+            content: "";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+    }
+
+    ul {
+        .dropdown {
+            position: absolute;
+            right: 10px;
+            top: 8px;
+        }
+
+        .content {
+            margin-right: 34px;
+        }
+    }
+}
+
+.birthday-box {
+    select {
+        padding: 5px;
+        margin: 0 5px 5px 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .settings {
+        ul {
+            li {
+                .dropdown, .privacy-icon {
+                    display: none;
+                }
+
+                &:hover {
+                    background: #e6e6e6;
+
+                    .dropdown {
+                        display: block;
+                    }
+
+                    .privacy-icon {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

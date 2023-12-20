@@ -1,0 +1,430 @@
+/***
+Customized Bootstrap Modal
+***/
+
+.modal {
+    z-index: $zindex-modal;
+
+    .page-portlet-fullscreen & {
+        z-index: $zindex-modal + 10;
+    }
+
+    outline: none;
+    overflow-y: auto !important; /* Fix content shifting to the right on modal open due to scrollbar closed */
+
+    .modal-header {
+        border-bottom: 1px solid #efefef;
+
+        h3 {
+            font-weight: 300;
+        }
+
+        .btn-close {
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 1em;
+            height: 1em;
+            padding: .25em;
+            color: #000;
+            background: transparent url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E") 50%/1em auto no-repeat;
+            border: 0;
+            border-radius: .25rem;
+            opacity: .5;
+            box-shadow: none !important;
+            -webkit-filter: invert(1) grayscale(100%) brightness(200%);
+            filter: invert(1) grayscale(100%) brightness(200%);
+            margin: 0 10px;
+            &:hover {
+                color: #000;
+                text-decoration: none;
+                opacity: .75;
+            }
+        }
+    }
+
+    &.draggable-modal {
+        .modal-header {
+            cursor: move;
+        }
+    }
+
+    .modal-dialog {
+        z-index: $zindex-modal + 1;
+    }
+
+    > .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -22px;
+        margin-left: -22px;
+    }
+
+    &.in {
+        .page-loading {
+            display: none;
+        }
+    }
+}
+
+.modal-open {
+    overflow-y: auto !important;
+}
+
+.modal-open-noscroll {
+    overflow-y: hidden !important;
+}
+
+.modal-backdrop {
+    border: 0;
+    outline: none;
+
+    .page-portlet-fullscreen & {
+        z-index: $zindex-modal-background + 10;
+    }
+
+    &,
+    &.fade.in {
+        background-color: #333333 !important;
+    }
+}
+
+/* Full width modal */
+
+.modal-full.modal-dialog {
+    width: 95%;
+    max-width: none;
+}
+
+@media (max-width: $screen-sm-min) {
+
+    .modal-full.modal-dialog {
+        width: auto;
+    }
+
+}
+
+.modal-open {
+    overflow: hidden
+}
+
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    padding-right: 0 !important;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px
+}
+
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: none
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000000
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+    filter: alpha(opacity=50)
+}
+
+.modal-header {
+    padding: 0;
+    min-height: 16.42857143px;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    background: $brand-main-color;
+    border: none;
+
+    strong, h5.modal-title {
+        color: #ffffff;
+        float: left;
+        line-height: 45px;
+        margin: 0 0 0 15px;
+    }
+}
+
+.modal-body {
+    position: relative;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5
+}
+
+.modal-footer .btn + .btn {
+    margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+    margin-left: -1px
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 80px auto 30px auto
+    }
+
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+    }
+
+    .modal-sm {
+        width: 300px
+    }
+
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .modal-lg {
+        width: 1100px
+    }
+
+}
+
+.modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    background: #f9f9f9
+}
+
+.modal-header h4 {
+    font-weight: 600;
+    font-size: 13px;
+
+    .til_img {
+        background: url("#{$general-img-path}img.png") repeat scroll -220px -260px transparent;
+        float: left;
+        height: 45px;
+        width: 45px;
+        margin: 0 0 0 5px;
+    }
+}
+
+.modal-footer {
+    background: transparent;
+    border: none;
+    margin-top: 0;
+    padding: 15px
+}
+
+.modal-body {
+    padding-bottom: 0
+}
+
+.modal-body > p:last-child {
+    margin-bottom: 20px
+}
+
+.modal-dialog.size-adaptive {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px
+}
+
+.modal-dialog.adaptive-height {
+    height: 100%;
+    min-height: 600px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.modal-dialog.adaptive-height .modal-content {
+    height: 100%
+}
+
+@media (min-width: 768px) {
+    .modal-dialog.size-tiny {
+        width: 300px
+    }
+
+    .modal-dialog.size-small {
+        width: 400px
+    }
+
+}
+
+@media (min-width: 992px) {
+    .modal-dialog.size-large {
+        width: 750px
+    }
+
+    .modal-dialog.size-huge {
+        width: 900px
+    }
+
+    .modal-dialog.size-giant {
+        width: 982px
+    }
+
+}
+
+@media (max-width: 768px) {
+    .modal-dialog.size-adaptive {
+        width: auto;
+        padding: 5px 0;
+        margin: 0
+    }
+
+}
+
+.modal.fade .modal-dialog {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.3s, width 0s;
+    transition: all 0.3s, width 0s;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7)
+}
+
+.modal.fade.show .modal-dialog {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.popup-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.popup-backdrop .popup-loading-indicator {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left: -50px;
+    -webkit-transition: all 0.3s, width 0s;
+    transition: all 0.3s, width 0s;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.popup-backdrop .popup-loading-indicator:after {
+    content: ' ';
+    display: block;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('#{$general-img-path}loader-transparent.svg');
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    margin: 25px 0 0 25px
+}
+
+.popup-backdrop.loading .popup-loading-indicator {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.modal-body {
+    .form-actions {
+        padding-bottom: 15px;
+    }
+}
+
+.modal {
+    .modal-header {
+        .close {
+            box-sizing: content-box;
+            width: 1em;
+            height: 1em;
+            padding: 0.25em;
+            color: #000;
+            background: transparent url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E") 50%/1em auto no-repeat;
+            border: 0;
+            border-radius: 0.25rem;
+            opacity: 0.5;
+            box-shadow: none !important;
+            filter: invert(1) grayscale(100%) brightness(200%);
+            margin: 0 10px;
+            text-indent: -9999px;
+        }
+    }
+}

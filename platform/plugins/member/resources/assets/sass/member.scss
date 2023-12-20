@@ -1,0 +1,159 @@
+.member-page {
+    margin: 50px 0;
+}
+
+.profile-sidebar {
+    padding: 20px;
+    color: rgb(228, 228, 228);
+    border: 1px solid #f1f1f1;
+    background: #f1f2f2;
+}
+
+.member-page .panel {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.member-page .userpic-avatar {
+    border: 2px solid #ffffff;
+}
+
+.member-page .profile-usermenu ul {
+    margin: 20px 0;
+    list-style: none;
+    display: block;
+}
+
+.member-page .profile-usermenu ul li {
+    display: block;
+}
+
+.member-page .profile-usermenu ul li i {
+    float: right;
+    color: rgb(82, 82, 82);
+    line-height: 25px;
+    font-size: 1.1em;
+}
+
+.member-page .profile-usermenu ul li a {
+    color: rgb(0, 0, 0);
+    padding-right: 30px;
+}
+
+.member-page .profile-usermenu ul li a.active {
+    text-decoration: none;
+    color: rgb(0, 138, 143);
+    font-weight: bold;
+}
+
+.member-page .profile-usertitle-name {
+    font-size: 1em;
+    margin: 20px 0;
+    text-align: center;
+    color: rgb(0, 131, 136);
+}
+
+.member-page .profile-content {
+    padding: 20px 20px 20px 50px;
+}
+
+h2.member-page-title {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: rgb(0, 131, 136);
+}
+
+.member-page .input-group {
+    margin-top: 30px;
+}
+
+.member-page .input-group .input-group-prepend {
+    min-width: 120px;
+    text-align: left;
+    background: rgb(236, 236, 236);
+    border: 1px solid rgb(0, 131, 136);
+    border-right: none;
+    font-size: 1em;
+    height: 45px;
+}
+
+.member-page .input-group input {
+    border-radius: 3px;
+    border: 1px solid rgb(0, 131, 136);
+    border-left: none;
+}
+
+.member-page .input-group select {
+    border-radius: 3px;
+    border: 1px solid rgb(0, 131, 136);
+    border-left: none;
+    height: 45px !important;
+}
+
+.member-page .input-group input:disabled {
+    background-color: rgb(177, 177, 177);
+
+}
+
+.member-page .input-group input:focus {
+    border: 2px solid rgb(0, 131, 136);
+}
+
+.member-page button {
+    border-radius: 3px;
+    margin: 0;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+.member-page button:hover {
+    background-color: rgb(0, 131, 136);
+}
+
+.member-page .text-danger small {
+    font-size: 1em;
+    color: rgb(240, 0, 0);
+}
+
+.member-page .btn-bs-file {
+    position: relative;
+    width: 100%;
+    border: 2px solid rgb(0, 131, 136);
+    border-radius: 3px;
+
+}
+
+.member-page .btn-bs-file:hover {
+    cursor: pointer;
+    background-color: rgb(0, 131, 136);
+}
+
+.member-page .btn-bs-file input[type="file"] {
+    position: absolute;
+    top: -9999999px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+    cursor: inherit;
+}
+
+.member-page .customer-help {
+    margin: 20px 0;
+
+}
+
+.main-login-wrapper {
+    max-width: 600px;
+    margin: 30px auto;
+
+    .form-border-box {
+        border: 1px solid #eee;
+        padding: 30px;
+
+        .normal {
+            font-weight: 400;
+        }
+    }
+}

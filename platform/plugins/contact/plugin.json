@@ -1,0 +1,10 @@
+{
+    "id": "botble/contact",
+    "name": "Contact Form",
+    "namespace": "Botble\\Contact\\",
+    "provider": "Botble\\Contact\\Providers\\ContactServiceProvider",
+    "author": "Botble Technologies",
+    "url": "https://botble.com",
+    "version": "2.0.0",
+    "description": "Contact Form"
+}

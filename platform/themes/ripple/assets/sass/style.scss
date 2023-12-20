@@ -1,0 +1,11 @@
+$color-1st: var(--color-1st);
+$font-1st: var(--primary-font);
+
+*, body {
+    font-family: $font-1st;
+}
+
+@import 'main';
+@import 'content';
+@import 'rtl';
+@import 'custom';

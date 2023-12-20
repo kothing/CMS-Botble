@@ -1,0 +1,53 @@
+#seo_wrap {
+    position: relative;
+
+    .btn-trigger-show-seo-detail {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        text-decoration: none !important;
+    }
+
+    .seo-preview {
+        margin-bottom: 20px;
+
+        * {
+            word-break: break-all;
+        }
+
+        .page-title-seo {
+            min-height: 21px;
+            display: block;
+            font-size: 18px;
+            color: #1a0dab;
+            line-height: 21px;
+            margin-bottom: 2px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .page-description-seo {
+            p {
+                display: block;
+                color: #545454;
+                line-height: 18px;
+                font-size: 13px;
+            }
+        }
+
+        .page-url-seo {
+            p {
+                display: block;
+                word-wrap: break-word;
+                color: #006621;
+                font-size: 13px;
+                line-height: 16px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "name": "botble/platform",
+    "description": "The Botble Platform based on Laravel Framework.",
+    "keywords": [
+        "botble",
+        "botble cms",
+        "botble platform"
+    ],
+    "homepage": "https://botble.com",
+    "support": {
+        "issues": "https://botble.ticksy.com",
+        "document": "https://docs.botble.com"
+    },
+    "authors": [
+        {
+            "name": "Botble Technologies",
+            "email": "contact@botble.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "ext-zip": "*",
+        "ext-gd": "*",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "botble/assets": "^1.0",
+        "intervention/image": "^2.6",
+        "kris/laravel-form-builder": "dev-master",
+        "laravelcollective/html": "^6.2",
+        "xantios/mimey": "^2.2",
+        "tightenco/ziggy": "^1.4",
+        "yajra/laravel-datatables-buttons": "^9.1",
+        "yajra/laravel-datatables-oracle": "^10.2",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "mews/purifier": "^3.3",
+        "maatwebsite/excel": "^3.1",
+        "symfony/http-client": "^6.0",
+        "symfony/postmark-mailer": "^6.0",
+        "symfony/mailgun-mailer": "^6.0",
+        "twig/twig": "^3.0",
+        "doctrine/dbal": "^3.2",
+        "league/flysystem-aws-s3-v3": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Botble\\Support\\": "support/src",
+            "Botble\\ACL\\": "acl/src",
+            "Botble\\Base\\": "base/src",
+            "Botble\\Base\\Tests\\": "base/tests",
+            "Botble\\Dashboard\\": "dashboard/src",
+            "Botble\\Media\\": "media/src",
+            "Botble\\Setting\\": "setting/src",
+            "Botble\\Table\\": "table/src",
+            "Botble\\JsValidation\\": "js-validation/src",
+            "Botble\\Chart\\": "chart/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Base\\Providers\\BaseServiceProvider",
+                "Botble\\Base\\Providers\\CommandServiceProvider",
+                "Botble\\Base\\Providers\\EventServiceProvider",
+                "Botble\\Base\\Providers\\BreadcrumbsServiceProvider",
+                "Botble\\Base\\Providers\\ComposerServiceProvider",
+                "Botble\\Base\\Providers\\MailConfigServiceProvider",
+                "Botble\\Base\\Providers\\FormServiceProvider",
+                "Botble\\Support\\Providers\\SupportServiceProvider",
+                "Botble\\Table\\Providers\\TableServiceProvider",
+                "Botble\\ACL\\Providers\\AclServiceProvider",
+                "Botble\\Dashboard\\Providers\\DashboardServiceProvider",
+                "Botble\\Media\\Providers\\MediaServiceProvider",
+                "Botble\\JsValidation\\Providers\\JsValidationServiceProvider",
+                "Botble\\Chart\\Providers\\ChartServiceProvider"
+            ],
+            "aliases": {
+                "Action": "Botble\\Base\\Facades\\Action",
+                "Assets": "Botble\\Base\\Facades\\Assets",
+                "BaseHelper": "Botble\\Base\\Facades\\BaseHelper",
+                "Breadcrumbs": "Botble\\Base\\Facades\\Breadcrumbs",
+                "DashboardMenu": "Botble\\Base\\Facades\\DashboardMenu",
+                "EmailHandler": "Botble\\Base\\Facades\\EmailHandler",
+                "Filter": "Botble\\Base\\Facades\\Filter",
+                "Form": "Botble\\Base\\Facades\\Form",
+                "Html": "Botble\\Base\\Facades\\Html",
+                "MacroableModels": "Botble\\Base\\Facades\\MacroableModels",
+                "MetaBox": "Botble\\Base\\Facades\\MetaBox",
+                "PageTitle": "Botble\\Base\\Facades\\PageTitle",
+                "JsValidator": "Botble\\JsValidation\\Facades\\JsValidator",
+                "Setting": "Botble\\Setting\\Facades\\Setting",
+                "RvMedia": "Botble\\Media\\Facades\\RvMedia"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

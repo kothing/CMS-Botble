@@ -1,0 +1,106 @@
+/***
+Customized Bootstrap Tabs
+***/
+
+/* Tabs and pills */
+
+.nav-tabs,
+.nav-pills {
+    margin-bottom: 10px;
+
+    > li {
+        > a {
+            font-size: 14px;
+
+            > .badge {
+                margin-top: -6px;
+            }
+
+            @include border-radius($general-border-radius $general-border-radius 0 0);
+        }
+
+        .dropdown-menu {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &.nav-tabs-sm,
+    &.nav-pills-sm {
+        > li > a {
+            font-size: 13px;
+        }
+    }
+
+    .dropdown.open {
+        > .dropdown-toggle {
+            background: #eeeeee;
+            color: #0d638f;
+            border-color: transparent;
+        }
+    }
+}
+
+/* Left and right tabs */
+
+.tabs-right.nav-tabs,
+.tabs-left.nav-tabs {
+    border-bottom: 0;
+
+    > li {
+        float: none;
+
+        > a {
+            margin-right: 0;
+        }
+    }
+}
+
+/***
+Custom tabs
+***/
+
+/* In BS3.0.0 tabbable class was removed. We had to added it back */
+
+.tabbable {
+    @include clearfix();
+}
+
+.tabbable-custom {
+    margin-bottom: 15px;
+    padding: 0;
+
+    > .nav-tabs {
+        border: none;
+        margin: 0;
+
+        > li {
+            margin-right: 2px;
+            border-top: 2px solid transparent;
+
+            > a {
+                margin-right: 0;
+                @include border-radius(0);
+                transition: color .2s ease, background-color .2s ease;
+
+                &.active {
+                    border-top: 3px solid $brand-danger;
+                    margin-top: 0;
+                    position: relative;
+
+                    @include border-radius(0);
+                }
+            }
+        }
+    }
+
+    > .tab-content {
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        padding: 10px;
+
+        @include border-radius(0 0 $general-border-radius $general-border-radius);
+    }
+}

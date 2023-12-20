@@ -1,0 +1,32 @@
+{
+    "name": "botble/theme",
+    "description": "Theme package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\Theme\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev",
+        "botble/sitemap": "*@dev",
+        "botble/widget": "*@dev",
+        "botble/slug": "*@dev",
+        "botble/seo-helper": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Theme\\Providers\\ThemeServiceProvider",
+                "Botble\\Theme\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Theme": "Botble\\Theme\\Facades\\Theme",
+                "ThemeOption": "Botble\\Theme\\Facades\\ThemeOption",
+                "ThemeManager": "Botble\\Theme\\Facades\\Manager",
+                "AdminBar": "Botble\\Theme\\Facades\\AdminBar",
+                "SiteMapManager": "Botble\\Theme\\Facades\\SiteMapManager"
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+/* purgecss start ignore */
+figure.image {
+    margin  : 10px 0;
+    display : inline-block;
+}
+
+figcaption {
+    background: #f5f5f5;
+    padding: 10px;
+    font-size: 90%;
+    text-align: center;
+}
+/* purgecss end ignore */

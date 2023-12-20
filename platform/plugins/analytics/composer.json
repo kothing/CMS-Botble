@@ -1,0 +1,10 @@
+{
+    "name": "botble/analytics",
+    "description": "Analytics plugin",
+    "type": "package",
+    "require": {
+        "google/apiclient": "^2.12",
+        "google/analytics-data": "^0.10.0",
+        "symfony/cache": "^5.4|^6.0"
+    }
+}

@@ -1,0 +1,99 @@
+<?php
+
+namespace Botble\{Module}\Http\Controllers;
+
+use Botble\{Module}\Http\Requests\{Name}Request;
+use Botble\{Module}\Models\{Name};
+use Botble\Base\Facades\PageTitle;
+use Botble\Base\Http\Controllers\BaseController;
+use Illuminate\Http\Request;
+use Exception;
+use Botble\{Module}\Tables\{Name}Table;
+use Botble\Base\Events\CreatedContentEvent;
+use Botble\Base\Events\DeletedContentEvent;
+use Botble\Base\Events\UpdatedContentEvent;
+use Botble\Base\Http\Responses\BaseHttpResponse;
+use Botble\{Module}\Forms\{Name}Form;
+use Botble\Base\Forms\FormBuilder;
+
+class {Name}Controller extends BaseController
+{
+    public function index({Name}Table $table)
+    {
+        PageTitle::setTitle(trans('{types}/{-module}::{-name}.name'));
+
+        return $table->renderTable();
+    }
+
+    public function create(FormBuilder $formBuilder)
+    {
+        PageTitle::setTitle(trans('{types}/{-module}::{-name}.create'));
+
+        return $formBuilder->create({Name}Form::class)->renderForm();
+    }
+
+    public function store({Name}Request $request, BaseHttpResponse $response)
+    {
+        ${+name} = {Name}::query()->create($request->input());
+
+        event(new CreatedContentEvent({NAME}_MODULE_SCREEN_NAME, $request, ${+name}));
+
+        return $response
+            ->setPreviousUrl(route('{-name}.index'))
+            ->setNextUrl(route('{-name}.edit', ${+name}->getKey()))
+            ->setMessage(trans('core/base::notices.create_success_message'));
+    }
+
+    public function edit({Name} ${+name}, FormBuilder $formBuilder)
+    {
+        PageTitle::setTitle(trans('core/base::forms.edit_item', ['name' => ${+name}->name]));
+
+        return $formBuilder->create({Name}Form::class, ['model' => ${+name}])->renderForm();
+    }
+
+    public function update({Name} ${+name}, {Name}Request $request, BaseHttpResponse $response)
+    {
+        ${+name}->fill($request->input());
+
+        ${+name}->save();
+
+        event(new UpdatedContentEvent({NAME}_MODULE_SCREEN_NAME, $request, ${+name}));
+
+        return $response
+            ->setPreviousUrl(route('{-name}.index'))
+            ->setMessage(trans('core/base::notices.update_success_message'));
+    }
+
+    public function destroy({Name} ${+name}, Request $request, BaseHttpResponse $response)
+    {
+        try {
+            ${+name}->delete();
+
+            event(new DeletedContentEvent({NAME}_MODULE_SCREEN_NAME, $request, ${+name}));
+
+            return $response->setMessage(trans('core/base::notices.delete_success_message'));
+        } catch (Exception $exception) {
+            return $response
+                ->setError()
+                ->setMessage($exception->getMessage());
+        }
+    }
+
+    public function deletes(Request $request, BaseHttpResponse $response)
+    {
+        $ids = $request->input('ids');
+        if (empty($ids)) {
+            return $response
+                ->setError()
+                ->setMessage(trans('core/base::notices.no_select'));
+        }
+
+        foreach ($ids as $id) {
+            ${+name} = {Name}::query()->findOrFail($id);
+            ${+name}->delete();
+            event(new DeletedContentEvent({NAME}_MODULE_SCREEN_NAME, $request, ${+name}));
+        }
+
+        return $response->setMessage(trans('core/base::notices.delete_success_message'));
+    }
+}

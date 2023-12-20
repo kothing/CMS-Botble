@@ -1,0 +1,326 @@
+/***
+Customized Bootstrap Dropdowns
+***/
+
+/***
+Dropdowns
+***/
+
+$color-blue: #009dc7 !default;
+
+.dropup.open,
+.dropdown.open {
+    > .dropdown-toggle {
+        border-color: #dddddd;
+    }
+}
+
+/***
+Dropdown Menu
+***/
+
+/*rtl:ignore*/
+.dropdown-menu {
+    box-shadow: $dropdown-shadow;
+}
+
+.dropdown-menu {
+    left: 0#{'/*rtl:auto*/'};
+    min-width: 175px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    float: left;
+    list-style: none;
+    text-shadow: none;
+    padding: 0;
+    background-color: #ffffff;
+    margin: 10px 0 0 0;
+    border: 1px solid #eeeeee;
+    font-family: $font-family-default;
+
+    .dropdown-hoverable:hover & {
+        display: block;
+    }
+
+    @include border-radius($general-border-radius);
+
+    li.divider {
+        background: #f1f3f6;
+    }
+
+    li.header {
+        padding: 8px 14px 2px 14px;
+    }
+
+    > li {
+        > a {
+            padding: 8px 16px;
+            color: lighten(#555555, 10%);
+            text-decoration: none;
+            display: block;
+            clear: both;
+            font-weight: 300;
+            line-height: 18px;
+            white-space: nowrap;
+
+            > [class^="fa-"],
+            > [class*=" fa-"] {
+                color: #888888;
+            }
+
+            > [class^="icon-"],
+            > [class*=" icon-"] {
+                color: #666666;
+            }
+
+            > [class^="glyphicon-"],
+            > [class*=" glyphicon-"] {
+                color: #888888;
+            }
+        }
+
+        &:hover,
+        &.active,
+        &.active:hover {
+            > a {
+                text-decoration: none;
+                background-image: none;
+                background-color: lighten(#eeeeee, 3%);
+                color: #555555;
+                filter: none;
+            }
+        }
+    }
+
+    &.bottom-up {
+        top: auto;
+        bottom: 100%;
+        margin-bottom: 2px;
+
+        &:before,
+        &:after {
+            display: none !important;
+        }
+    }
+
+    > li:first-child:hover > a {
+        border-radius: $general-border-radius $general-border-radius 0 0;
+    }
+
+    > li:last-child:hover > a {
+        border-radius: 0 0 $general-border-radius $general-border-radius;
+    }
+}
+
+// hoverable dropdown menu
+.dropdown-hover:hover {
+    > .dropdown-menu {
+        display: block;
+    }
+}
+
+.dropdown,
+.dropdown-toggle,
+.btn-group {
+    > .dropdown-menu {
+
+        margin-top: 10px;
+
+        &:before {
+            position: absolute;
+            top: -8px;
+            left: 9px;
+            right: auto;
+            display: inline-block !important;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid #e0e0e0;
+            border-left: 8px solid transparent;
+            content: '';
+        }
+
+        &:after {
+            position: absolute;
+            top: -7px;
+            left: 10px;
+            right: auto;
+            display: inline-block !important;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #ffffff;
+            border-left: 7px solid transparent;
+            content: '';
+        }
+    }
+
+    &.float-start {
+        &:before {
+            left: auto;
+            right: 9px;
+        }
+
+        &:after {
+            left: auto;
+            right: 10px;
+        }
+    }
+
+    &.float-end {
+        &:before {
+            left: auto;
+            right: 9px;
+        }
+
+        &:after {
+            left: auto;
+            right: 10px;
+        }
+    }
+
+    &.dropup {
+        > .dropdown-menu {
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            &:after,
+            &:before {
+                display: none !important;
+            }
+        }
+    }
+}
+
+/* Dropdown submenu support for Bootsrap 3 */
+.dropdown-submenu {
+    position: relative;
+
+    > .dropdown-menu {
+        top: 5px;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+    }
+
+    > a:after {
+        position: absolute;
+        display: inline-block;
+        font-size: 14px;
+        right: 7px;
+        top: 7px;
+        font-family: Font Awesome\ 5 Free;
+        height: auto;
+        content: "\f105";
+        font-weight: 900;
+    }
+
+    &:hover > .dropdown-menu {
+        display: block;
+    }
+
+    &:hover > a:after {
+        border-left-color: #ffffff;
+    }
+
+    &.float-start {
+        float: none;
+
+        > .dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+        }
+    }
+
+    // dropdown menu in dropup mode
+    .dropup & > .dropdown-menu {
+        top: auto;
+        bottom: 0;
+        margin-top: 0;
+        margin-bottom: -2px;
+    }
+}
+
+.nav.float-end > li > .dropdown-menu,
+.nav > li > .dropdown-menu.float-end {
+    right: 0;
+    left: auto;
+
+    &:before {
+        right: 12px;
+        left: auto;
+    }
+
+    &:after {
+        right: 13px;
+        left: auto;
+    }
+
+    .dropdown-menu {
+        right: 100%;
+        left: auto;
+        margin-right: -1px;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: $screen-xs-max) { /* 767px */
+
+    .navbar-nav {
+        .open {
+            .dropdown-menu {
+                position: absolute;
+                float: left;
+                width: auto;
+                margin-top: 0;
+                background-color: #ffffff;
+                border: 1px solid #efefef;
+                box-shadow: 5px 5px rgba(#666, 0.1);
+
+                > li {
+                    > a {
+                        padding: 6px 0 6px 13px;
+                        color: #333333;
+                    }
+
+                    > a:hover,
+                    > a:active {
+                        background-color: #eeeeee;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***
+Dropdown Checkboxes
+***/
+
+.dropdown-content {
+    padding: 10px;
+
+    form {
+        margin: 0;
+    }
+}
+
+.dropdown.inline .dropdown-menu {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-radiobuttons,
+.dropdown-checkboxes {
+    padding: 5px;
+
+    label {
+        display: block;
+        font-weight: 300;
+        color: #333333;
+        margin-bottom: 4px;
+        margin-top: 4px;
+
+        .radio {
+            margin-right: 3px;
+        }
+    }
+}

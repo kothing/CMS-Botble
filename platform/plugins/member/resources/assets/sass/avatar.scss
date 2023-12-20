@@ -1,0 +1,151 @@
+@import 'cropper';
+
+.avatar-wrapper {
+    > * {
+        direction: ltr !important;
+    }
+}
+
+.thumbnail {
+    img {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+        border-radius: 2px;
+    }
+
+    a {
+        img {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            z-index: 2;
+            border-radius: 2px;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+        border: 0;
+    }
+}
+
+.thumb {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+        .thumb-options {
+            opacity: 1;
+        }
+    }
+}
+
+.thumb-zoom {
+    background: #2d3a42;
+    display: inline-block;
+    border-radius: 2px;
+    border: 0;
+
+    img {
+        opacity: 1;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.2;
+        }
+    }
+}
+
+.thumb-options {
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(50, 67, 77, 0.8);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+
+    span {
+        display: block;
+        top: 50%;
+        position: absolute;
+        margin-top: -17px;
+        width: 100%;
+
+        a + a {
+            margin-left: 5px;
+        }
+    }
+}
+
+.profile-image {
+    cursor: pointer;
+}
+
+.avatar-preview-wrapper {
+    img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.avatar-preview {
+    margin-top: 15px;
+    margin-right: 15px;
+    border: 1px solid #eeeeee;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.preview-md {
+    width: 100px;
+    height: 100px;
+}
+
+.preview-lg {
+    width: 185px;
+    height: 185px;
+    margin-top: 15px;
+}
+
+.preview-sm {
+    width: 50px;
+    height: 50px;
+}
+
+.avatar-wrapper {
+    height: 364px;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .25);
+    background-color: #fcfcfc;
+    overflow: hidden;
+}
+
+
+.avatar-upload {
+    text-align: left;
+
+    .avatarInput {
+        display: inline-block;
+    }
+}
+
+.crop-avatar {
+    .modal-title {
+        text-align: left;
+    }
+}

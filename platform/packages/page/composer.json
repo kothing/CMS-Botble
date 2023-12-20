@@ -1,0 +1,21 @@
+{
+    "name": "botble/page",
+    "description": "Page package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\Page\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev",
+        "botble/revision": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Page\\Providers\\PageServiceProvider"
+            ]
+        }
+    }
+}

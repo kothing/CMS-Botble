@@ -1,0 +1,20 @@
+{
+    "name": "botble/dev-tool",
+    "description": "Dev tools package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\DevTool\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\DevTool\\Providers\\DevToolServiceProvider"
+            ]
+        }
+    }
+}

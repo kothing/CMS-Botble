@@ -1,0 +1,264 @@
+/*Table*/
+@use "sass:math";
+
+.rv-media-list {
+    border-bottom: 1px solid $color-lighter-black;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .rv-media-list-title {
+        display: flex;
+        @include lib-css(flex-direction, row);
+        padding: 15px 10px;
+        cursor: pointer;
+
+        .custom-checkbox {
+            width: 35px;
+            min-width: 35px;
+        }
+
+        .rv-media-file-name {
+            @include lib-css(flex-grow, 1);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 15px;
+            padding-top: 3px;
+
+            i {
+                margin-right: 5px;
+
+                &:before {
+                    display: inline-block;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .rv-media-file-size {
+            width: 120px;
+            min-width: 120px;
+        }
+
+        .rv-media-created-at {
+            width: 150px;
+            min-width: 150px;
+        }
+
+        &:nth-child(odd) {
+            background-color: #ecf0f1;
+        }
+
+        &:hover {
+            background-color: darken(#ecf0f1, 10%);
+        }
+    }
+}
+
+/*Grid*/
+.rv-media-grid {
+    padding: 10px 10px 0;
+
+    ul {
+        padding: 0;
+        margin: 0 -5px;
+        @include clearfix;
+    }
+
+    li {
+        display: block;
+        width: percentage(math.div(1px, 8px));
+        margin-bottom: 15px;
+        float: left;
+        padding: 0 5px;
+
+        .rv-media-item {
+            position: relative;
+            cursor: pointer;
+            @include lib-css(transition, all 0.1s ease-in-out);
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+            }
+
+            .media-item-selected {
+                display: none;
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                border-radius: 50% !important;
+                background: $color-secondary;
+                height: 24px;
+                width: 24px;
+                z-index: 20;
+                text-align: center;
+
+                svg {
+                    fill: white;
+                    width: 18px;
+                    margin-top: 3px;
+                }
+            }
+        }
+
+        .rv-media-thumbnail {
+            border-bottom: 0 none;
+
+            img {
+                width: auto;
+                height: 100%;
+                left: 50%;
+                top: 0;
+                @include lib-css(transform, translateX(-50%));
+            }
+        }
+
+        .rv-media-description {
+            padding: 8px 10px;
+            @include lib-css(transition, all 0.1s ease-in-out);
+            background-color: #dddddd;
+            text-align: center;
+
+            .title {
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .size {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+
+        input[type=checkbox]:checked + .rv-media-item {
+            .media-item-selected {
+                display: block;
+            }
+
+            &:after {
+                box-shadow: -2px -2px 0px $color-secondary inset, 2px 2px 0px $color-secondary inset;
+            }
+
+            .rv-media-description {
+                background-color: $color-secondary;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.rv-media-grid-small-thumbnail {
+    li {
+        width: percentage(math.div(1px, 3px));
+
+        .rv-media-item {
+            display: flex;
+            @include lib-css(flex-direction, row);
+        }
+
+        .rv-media-thumbnail {
+            width: 100px;
+            min-width: 100px;
+            border: 0 none;
+            left: 0;
+            top: 0;
+        }
+
+        .rv-media-description {
+            @include lib-css(flex-grow, 1);
+        }
+    }
+}
+
+.rv-media-grid:not(.rv-media-grid-small-thumbnail) {
+    .rv-media-thumbnail {
+        i {
+            font-size: 70px;
+        }
+    }
+}
+
+.rv-media-items {
+    li.no-items {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        border: 0 none;
+        position: absolute;
+        @include center-all();
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #94a7b1;
+        font-weight: 400;
+        margin: 0 !important;
+        text-align: center;
+
+        .fa, .fas, .far, .fab {
+            font-size: 150px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 17px;
+        }
+
+        .on-loading & {
+            display: none !important;
+        }
+    }
+
+    &.has-items .no-items {
+        display: none !important;
+    }
+
+    .rv-media-container[data-breadcrumb-count="0"] &,
+    .rv-media-container[data-breadcrumb-count="1"] & {
+        li.up-one-level {
+            display: none !important;
+        }
+    }
+
+    .rv-media-container:not([data-view-in="all_media"]) & li.no-items {
+        @include lib-css(pointer-events, none);
+    }
+
+    .rv-media-container[data-view-in="all_media"] & li.no-items {
+        width: 400px;
+        height: 400px;
+        border-radius: 50% !important;
+        border: 1px solid #dce6f1;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: $screen-md-max) {
+    .rv-media-grid li {
+        width: percentage(math.div(1px, 6px));
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .rv-media-grid li {
+        width: percentage(math.div(1px, 5px));
+    }
+}
+
+.context-menu-list {
+    z-index: 21 !important;
+}

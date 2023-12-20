@@ -1,0 +1,13 @@
+/***
+Customized Bootstrap Popover
+***/
+
+/*rtl:ignore*/
+.popover {
+    box-shadow: 5px 5px rgba(#666, 0.1);
+    padding: 0;
+}
+
+.popover .popover-title {
+    margin: 0 !important;
+}

@@ -1,0 +1,8 @@
+{
+    "name": "@packages/installer",
+    "version": "1.0.0",
+    "dependencies": {
+        "@tailwindcss/forms": "^0.5.3",
+        "tailwindcss": "^3.3.0"
+    }
+}

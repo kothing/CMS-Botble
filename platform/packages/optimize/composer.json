@@ -1,0 +1,23 @@
+{
+    "name": "botble/optimize",
+    "description": "Optimize page speed package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\Optimize\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Optimize\\Providers\\OptimizeServiceProvider"
+            ],
+            "aliases": {
+                "OptimizerHelper": "Botble\\Optimize\\Facades\\OptimizerHelper"
+            }
+        }
+    }
+}

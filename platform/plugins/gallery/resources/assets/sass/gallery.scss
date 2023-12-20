@@ -1,0 +1,129 @@
+#list-photo {
+    width: 100%;
+    margin: 0 -7px;
+
+    .item {
+        width: 33.333%;
+        margin-bottom: 14px;
+
+        .photo-item {
+            padding-left: 7px;
+            padding-right: 7px;
+
+            div {
+                -moz-transition: all 0.25s;
+                -webkit-transition: all 0.25s;
+                -o-transition: all 0.25s;
+                transition: all 0.25s;
+                padding: 5px;
+                -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    background: rgba(63, 63, 62, 0.1);
+                }
+            }
+
+            img {
+                border: 1px solid rgba(63, 63, 62, 0.4);
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.lg-outer {
+    .lg-thumb {
+        margin: 0 auto !important;
+    }
+}
+
+.lg-sub-html {
+    bottom: 100px !important;
+
+    &.inactive {
+        bottom: 0 !important;
+    }
+}
+
+.gallery-wrap {
+    .gallery-item {
+        width: 32.8%;
+        margin-right: 0.8%;
+        float: left;
+        max-height: 250px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        position: relative;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .gallery-detail {
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 4px 10px;
+            -webkit-transition: ease 0.25s;
+            -moz-transition: ease 0.25s;
+            -o-transition: ease 0.25s;
+            transition: ease 0.25s;
+
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: #32c5d2 !important;
+                }
+            }
+
+            .gallery-title {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+
+        &:hover {
+            .gallery-detail {
+                bottom: 0;
+            }
+        }
+
+        .img-wrap {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-wrap {
+        .gallery-item {
+            width: 100%;
+        }
+    }
+
+    .gallery-wrap {
+        .gallery-item {
+            .gallery-detail {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+body[dir="rtl"] {
+    .lg-outer {
+        direction: ltr;
+    }
+}

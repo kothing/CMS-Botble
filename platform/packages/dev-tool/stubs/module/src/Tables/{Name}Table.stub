@@ -1,0 +1,133 @@
+<?php
+
+namespace Botble\{Module}\Tables;
+
+use Botble\Base\Facades\BaseHelper;
+use Botble\Base\Facades\Html;
+use Botble\Base\Enums\BaseStatusEnum;
+use Botble\{Module}\Models\{Name};
+use Botble\Table\Abstracts\TableAbstract;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Database\Query\Builder as QueryBuilder;
+use Illuminate\Http\JsonResponse;
+use Botble\Table\DataTables;
+
+class {Name}Table extends TableAbstract
+{
+    public function __construct(DataTables $table, UrlGenerator $urlGenerator, {Name} ${+name})
+    {
+        parent::__construct($table, $urlGenerator);
+
+        $this->model = ${+name};
+
+        $this->hasActions = true;
+        $this->hasFilter = true;
+
+        if (!Auth::user()->hasAnyPermission(['{-name}.edit', '{-name}.destroy'])) {
+            $this->hasOperations = false;
+            $this->hasActions = false;
+        }
+    }
+
+    public function ajax(): JsonResponse
+    {
+        $data = $this->table
+            ->eloquent($this->query())
+            ->editColumn('name', function ({Name} $item) {
+                if (!Auth::user()->hasPermission('{-name}.edit')) {
+                    return BaseHelper::clean($item->name);
+                }
+                return Html::link(route('{-name}.edit', $item->getKey()), BaseHelper::clean($item->name));
+            })
+            ->editColumn('checkbox', function ({Name} $item) {
+                return $this->getCheckbox($item->getKey());
+            })
+            ->editColumn('created_at', function ({Name} $item) {
+                return BaseHelper::formatDate($item->created_at);
+            })
+            ->editColumn('status', function ({Name} $item) {
+                return $item->status->toHtml();
+            })
+            ->addColumn('operations', function ({Name} $item) {
+                return $this->getOperations('{-name}.edit', '{-name}.destroy', $item);
+            });
+
+        return $this->toJson($data);
+    }
+
+    public function query(): Relation|Builder|QueryBuilder
+    {
+        $query = $this
+            ->getModel()
+            ->query()
+            ->select([
+               'id',
+               'name',
+               'created_at',
+               'status',
+           ]);
+
+        return $this->applyScopes($query);
+    }
+
+    public function columns(): array
+    {
+        return [
+            'id' => [
+                'title' => trans('core/base::tables.id'),
+                'width' => '20px',
+            ],
+            'name' => [
+                'title' => trans('core/base::tables.name'),
+                'class' => 'text-start',
+            ],
+            'created_at' => [
+                'title' => trans('core/base::tables.created_at'),
+                'width' => '100px',
+            ],
+            'status' => [
+                'title' => trans('core/base::tables.status'),
+                'width' => '100px',
+            ],
+        ];
+    }
+
+    public function buttons(): array
+    {
+        return $this->addCreateButton(route('{-name}.create'), '{-name}.create');
+    }
+
+    public function bulkActions(): array
+    {
+        return $this->addDeleteAction(route('{-name}.deletes'), '{-name}.destroy', parent::bulkActions());
+    }
+
+    public function getBulkChanges(): array
+    {
+        return [
+            'name' => [
+                'title' => trans('core/base::tables.name'),
+                'type' => 'text',
+                'validate' => 'required|max:120',
+            ],
+            'status' => [
+                'title' => trans('core/base::tables.status'),
+                'type' => 'select',
+                'choices' => BaseStatusEnum::labels(),
+                'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
+            ],
+            'created_at' => [
+                'title' => trans('core/base::tables.created_at'),
+                'type' => 'date',
+            ],
+        ];
+    }
+
+    public function getFilters(): array
+    {
+        return $this->getBulkChanges();
+    }
+}

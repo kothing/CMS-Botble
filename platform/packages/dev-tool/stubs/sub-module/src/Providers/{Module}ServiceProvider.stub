@@ -1,0 +1,15 @@
+// Add after this line: if (defined('LANGUAGE_ADVANCED_MODULE_SCREEN_NAME')) {
+\Botble\LanguageAdvanced\Supports\LanguageAdvancedManager::registerModule(\Botble\{Module}\Models\{Name}::class, [
+    'name',
+]);
+
+// Add after this line: Event::listen(RouteMatched::class, function () {
+\Botble\Base\Facades\DashboardMenu::registerItem([
+    'id' => 'cms-{types}-{-name}',
+    'priority' => 0,
+    'parent_id' => 'cms-{types}-{-module}',
+    'name' => '{types}/{-module}::{-name}.name',
+    'icon' => null,
+    'url' => route('{-name}.index'),
+    'permissions' => ['{-name}.index'],
+]);

@@ -1,0 +1,98 @@
+body {
+    background: $body-bg;
+}
+
+label {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark-text {
+    color: $color;
+
+    &:hover, &:focus {
+        color: $color;
+    }
+}
+
+.gray-text {
+    color: hsl(0, 0%, 29%);
+
+    &:hover, &:focus {
+        color: hsl(0, 0%, 29%);
+    }
+}
+
+.light-gray-text {
+    color: hsl(0, 0%, 45%);
+
+    &:hover, &:focus {
+        color: hsl(0, 0%, 45%);
+    }
+}
+
+.lightest-gray-text {
+    color: hsl(0, 0%, 75%);
+
+    &:hover, &:focus {
+        color: hsl(0, 0%, 75%);
+    }
+}
+
+.darkest-red {
+    color: $darkest-red-color !important;
+}
+
+.bg-darkest-red {
+    background-color: $darkest-red-color !important;
+}
+
+.b--darkest-red {
+    border-color: $darkest-red-color !important;
+}
+
+.middotDivider {
+    &:after {
+        color: rgba(0, 0, 0, .5);
+        content: "•";
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        width: 14px;
+    }
+}
+
+.body-empty-state {
+    padding: 60px 15px !important;
+    text-align: center;
+}
+
+.list-group-item {
+    padding: 0.5rem 1.25rem;
+}
+
+.default-btn {
+    border-radius: 4px;
+    border: 1px solid rgba(27, 31, 35, 0.2);
+    color: #24292e;
+    background-color: #fff;
+
+    &:hover, &:focus {
+        background-color: #e6ebf1;
+        border-color: rgba(27, 31, 35, 0.35);
+        color: #24292e;
+        text-decoration: none;
+    }
+}
+
+.link-gray-dark {
+    color: $color !important;
+
+    &:hover {
+        color: #0366d6 !important;
+        text-decoration: none;
+    }
+}

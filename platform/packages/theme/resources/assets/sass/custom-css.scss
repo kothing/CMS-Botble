@@ -1,0 +1,46 @@
+.main-form {
+    .handle-tool-drag {
+        background: #f7f7f7;
+        height: 20px;
+        user-select: none;
+        cursor: row-resize;
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        line-height: 14px;
+
+        &:before {
+            content: '\2261';
+            color: #999999;
+            position: absolute;
+            left: 50%;
+            font-size: 20px;
+        }
+
+        &:hover {
+            background: #f0f0f0;
+
+            &:before {
+                color: #000000;
+            }
+        }
+    }
+
+    .CodeMirror {
+        background: #f8f8f8;
+    }
+
+    .help-block {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-color: #d9edf7;
+        border: 1px solid #bce8f1;
+        padding: 5px;
+        font-size: .9em;
+        cursor: help;
+
+        * {
+            color: #31708f;
+        }
+    }
+}

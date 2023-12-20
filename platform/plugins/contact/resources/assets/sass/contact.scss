@@ -1,0 +1,17 @@
+.message-content {
+    font-family: Roboto, sans-serif;
+    background: rgba(0, 0, 0, .05);
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.answer-wrapper {
+    display: none;
+}

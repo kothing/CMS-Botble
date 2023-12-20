@@ -1,0 +1,16 @@
+.rv-media-wrapper {
+    .btn.collapse-panel {
+        color: $color-secondary;
+        font-size: 20px;
+
+        &,
+        i {
+            @include lib-css(transition, all 0.3s ease-in-out);
+        }
+    }
+
+    .disabled {
+        @include lib-css(pointer-events, none);
+        @include opacity(0.4);
+    }
+}

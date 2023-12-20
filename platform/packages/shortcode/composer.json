@@ -1,0 +1,23 @@
+{
+    "name": "botble/shortcode",
+    "description": "Shortcode package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Botble\\Shortcode\\": "src"
+        }
+    },
+    "require": {
+        "botble/platform": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Botble\\Shortcode\\Providers\\ShortcodeServiceProvider"
+            ],
+            "aliases": {
+                "Shortcode": "Botble\\Shortcode\\Facades\\Shortcode"
+            }
+        }
+    }
+}

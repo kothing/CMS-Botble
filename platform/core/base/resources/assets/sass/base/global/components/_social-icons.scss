@@ -1,0 +1,393 @@
+/***
+Social Icons
+***/
+
+.social-icons {
+    padding: 0;
+    margin: 0;
+
+    @include clearfix();
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        text-indent: -9999px;
+
+        > a {
+            @include border-radius(2px);
+            width: 28px;
+            height: 28px;
+            display: block;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            > a {
+                background-position: 0 -38px;
+            }
+        }
+
+        .amazon {
+            background: url(#{$general-img-path}social/amazon.png) no-repeat;
+        }
+
+        .behance {
+            background: url(#{$general-img-path}social/behance.png) no-repeat;
+        }
+
+        .blogger {
+            background: url(#{$general-img-path}social/blogger.png) no-repeat;
+        }
+
+        .deviantart {
+            background: url(#{$general-img-path}social/deviantart.png) no-repeat;
+        }
+
+        .dribbble {
+            background: url(#{$general-img-path}social/dribbble.png) no-repeat;
+        }
+
+        .dropbox {
+            background: url(#{$general-img-path}social/dropbox.png) no-repeat;
+        }
+
+        .evernote {
+            background: url(#{$general-img-path}social/evernote.png) no-repeat;
+        }
+
+        .facebook {
+            background: url(#{$general-img-path}social/facebook.png) no-repeat;
+        }
+
+        .forrst {
+            background: url(#{$general-img-path}social/forrst.png) no-repeat;
+        }
+
+        .github {
+            background: url(#{$general-img-path}social/github.png) no-repeat;
+        }
+
+        .google {
+            background: url(#{$general-img-path}social/googleplus.png) no-repeat;
+        }
+
+        .jolicloud {
+            background: url(#{$general-img-path}social/jolicloud.png) no-repeat;
+        }
+
+        .last-fm {
+            background: url(#{$general-img-path}social/last-fm.png) no-repeat;
+        }
+
+        .linkedin {
+            background: url(#{$general-img-path}social/linkedin.png) no-repeat;
+        }
+
+        .picasa {
+            background: url(#{$general-img-path}social/picasa.png) no-repeat;
+        }
+
+        .pintrest {
+            background: url(#{$general-img-path}social/pintrest.png) no-repeat;
+        }
+
+        .rss {
+            background: url(#{$general-img-path}social/rss.png) no-repeat;
+        }
+
+        .skype {
+            background: url(#{$general-img-path}social/skype.png) no-repeat;
+        }
+
+        .spotify {
+            background: url(#{$general-img-path}social/spotify.png) no-repeat;
+        }
+
+        .stumbleupon {
+            background: url(#{$general-img-path}social/stumbleupon.png) no-repeat;
+        }
+
+        .tumblr {
+            background: url(#{$general-img-path}social/tumblr.png) no-repeat;
+        }
+
+        .twitter {
+            background: url(#{$general-img-path}social/twitter.png) no-repeat;
+        }
+
+        .vimeo {
+            background: url(#{$general-img-path}social/vimeo.png) no-repeat;
+        }
+
+        .wordpress {
+            background: url(#{$general-img-path}social/wordpress.png) no-repeat;
+        }
+
+        .xing {
+            background: url(#{$general-img-path}social/xing.png) no-repeat;
+        }
+
+        .yahoo {
+            background: url(#{$general-img-path}social/yahoo.png) no-repeat;
+        }
+
+        .youtube {
+            background: url(#{$general-img-path}social/youtube.png) no-repeat;
+        }
+
+        .vk {
+            background: url(#{$general-img-path}social/vk.png) no-repeat;
+        }
+
+        .instagram {
+            background: url(#{$general-img-path}social/instagram.png) no-repeat;
+        }
+
+        .reddit {
+            background: url(#{$general-img-path}social/reddit.png) no-repeat;
+        }
+
+        .aboutme {
+            background: url(#{$general-img-path}social/aboutme.png) no-repeat;
+        }
+
+        .flickr {
+            background: url(#{$general-img-path}social/flickr.png) no-repeat;
+        }
+
+        .foursquare {
+            background: url(#{$general-img-path}social/foursquare.png) no-repeat;
+        }
+
+        .gravatar {
+            background: url(#{$general-img-path}social/gravatar.png) no-repeat;
+        }
+
+        .klout {
+            background: url(#{$general-img-path}social/klout.png) no-repeat;
+        }
+
+        .myspace {
+            background: url(#{$general-img-path}social/myspace.png) no-repeat;
+        }
+
+        .quora {
+            background: url(#{$general-img-path}social/quora.png) no-repeat;
+        }
+    }
+
+    &.social-icons-color {
+        > li {
+            > a {
+                opacity: 0.7;
+                background-position: 0 -38px !important;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.social-icons-circle {
+        > li {
+            > a {
+                border-radius: 25px !important;
+            }
+        }
+    }
+
+}
+
+/***
+Inline Social Icons
+***/
+
+.social-icon {
+    display: inline-block !important;
+    width: 28px;
+    height: 28px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    @include border-radius(2px);
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+
+    &.social-icon-circle {
+        border-radius: 25px !important;
+    }
+}
+
+.social-icon {
+    &.amazon {
+        background: url(#{$general-img-path}social/amazon.png) no-repeat;
+    }
+
+    &.behance {
+        background: url(#{$general-img-path}social/behance.png) no-repeat;
+    }
+
+    &.blogger {
+        background: url(#{$general-img-path}social/blogger.png) no-repeat;
+    }
+
+    &.deviantart {
+        background: url(#{$general-img-path}social/deviantart.png) no-repeat;
+    }
+
+    &.dribbble {
+        background: url(#{$general-img-path}social/dribbble.png) no-repeat;
+    }
+
+    &.dropbox {
+        background: url(#{$general-img-path}social/dropbox.png) no-repeat;
+    }
+
+    &.evernote {
+        background: url(#{$general-img-path}social/evernote.png) no-repeat;
+    }
+
+    &.facebook {
+        background: url(#{$general-img-path}social/facebook.png) no-repeat;
+    }
+
+    &.forrst {
+        background: url(#{$general-img-path}social/forrst.png) no-repeat;
+    }
+
+    &.github {
+        background: url(#{$general-img-path}social/github.png) no-repeat;
+    }
+
+    &.googleplus {
+        background: url(#{$general-img-path}social/googleplus.png) no-repeat;
+    }
+
+    &.jolicloud {
+        background: url(#{$general-img-path}social/jolicloud.png) no-repeat;
+    }
+
+    &.last-fm {
+        background: url(#{$general-img-path}social/last-fm.png) no-repeat;
+    }
+
+    &.linkedin {
+        background: url(#{$general-img-path}social/linkedin.png) no-repeat;
+    }
+
+    &.picasa {
+        background: url(#{$general-img-path}social/picasa.png) no-repeat;
+    }
+
+    &.pintrest {
+        background: url(#{$general-img-path}social/pintrest.png) no-repeat;
+    }
+
+    &.rss {
+        background: url(#{$general-img-path}social/rss.png) no-repeat;
+    }
+
+    &.skype {
+        background: url(#{$general-img-path}social/skype.png) no-repeat;
+    }
+
+    &.spotify {
+        background: url(#{$general-img-path}social/spotify.png) no-repeat;
+    }
+
+    &.stumbleupon {
+        background: url(#{$general-img-path}social/stumbleupon.png) no-repeat;
+    }
+
+    &.tumblr {
+        background: url(#{$general-img-path}social/tumblr.png) no-repeat;
+    }
+
+    &.twitter {
+        background: url(#{$general-img-path}social/twitter.png) no-repeat;
+    }
+
+    &.vimeo {
+        background: url(#{$general-img-path}social/vimeo.png) no-repeat;
+    }
+
+    &.wordpress {
+        background: url(#{$general-img-path}social/wordpress.png) no-repeat;
+    }
+
+    &.xing {
+        background: url(#{$general-img-path}social/xing.png) no-repeat;
+    }
+
+    &.yahoo {
+        background: url(#{$general-img-path}social/yahoo.png) no-repeat;
+    }
+
+    &.youtube {
+        background: url(#{$general-img-path}social/youtube.png) no-repeat;
+    }
+
+    &.vk {
+        background: url(#{$general-img-path}social/vk.png) no-repeat;
+    }
+
+    &.instagram {
+        background: url(#{$general-img-path}social/instagram.png) no-repeat;
+    }
+
+    &.reddit {
+        background: url(#{$general-img-path}social/reddit.png) no-repeat;
+    }
+
+    &.aboutme {
+        background: url(#{$general-img-path}social/aboutme.png) no-repeat;
+    }
+
+    &.flickr {
+        background: url(#{$general-img-path}social/flickr.png) no-repeat;
+    }
+
+    &.foursquare {
+        background: url(#{$general-img-path}social/foursquare.png) no-repeat;
+    }
+
+    &.gravatar {
+        background: url(#{$general-img-path}social/gravatar.png) no-repeat;
+    }
+
+    &.klout {
+        background: url(#{$general-img-path}social/klout.png) no-repeat;
+    }
+
+    &.myspace {
+        background: url(#{$general-img-path}social/myspace.png) no-repeat;
+    }
+
+    &.quora {
+        background: url(#{$general-img-path}social/quora.png) no-repeat;
+    }
+
+    &:hover {
+        background-position: 0 -38px;
+    }
+}
+
+.social-icon-color {
+    opacity: 0.7;
+    background-position: 0 -38px !important;
+
+    &:hover {
+        opacity: 1;
+    }
+}

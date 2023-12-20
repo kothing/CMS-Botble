@@ -1,0 +1,84 @@
+.rv-upload-progress {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    z-index: 9999;
+    @include lib-css(transition, all 0.3s linear);
+
+    &.hide-the-pane {
+        @include lib-css(transform, translateX(100%));
+        @include opacity(0);
+    }
+
+    .close-pane {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        margin-top: -12px;
+        width: 24px;
+        height: 24px;
+        color: $color-white;
+        background-color: $color-secondary;
+        line-height: 24px;
+        text-align: center;
+        @include lib-css(transition, all 0.3s ease-in-out);
+
+        &:hover {
+            @include opacity(0.8);
+        }
+    }
+
+    .panel {
+        margin: 0;
+        border: 0 none;
+    }
+
+    .panel-heading {
+        @include clearfix;
+        position: relative;
+        padding: 15px;
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    .panel-body {
+        padding: 0;
+        overflow: auto;
+        max-height: 180px;
+    }
+
+    .rv-upload-progress-table {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            @include clearfix;
+            border-bottom: 1px solid $color-lighter-black;
+            border-left: 1px solid $color-lighter-black;
+
+            &:nth-child(odd) {
+                background-color: rgba($color-lighter-black, 0.9);
+            }
+        }
+
+        .rv-table-col {
+            float: left;
+            width: 20%;
+            padding: 15px;
+
+            &:first-child {
+                width: 60%;
+            }
+        }
+    }
+
+    .file-name,
+    .file-size {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+}

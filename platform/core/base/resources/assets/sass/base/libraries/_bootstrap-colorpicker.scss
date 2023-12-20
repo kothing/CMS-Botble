@@ -1,0 +1,40 @@
+/***
+Bootstrap Colorpicker
+***/
+
+.popover {
+    &.colorpicker-bs-popover {
+        display: none;
+    }
+}
+
+.colorpicker-popup {
+    &.colorpicker-bs-popover-content {
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        top: 100%;
+        background: #fff;
+        box-shadow: 0 0 20px 0 rgb(62 28 131 / 10%);
+        -webkit-box-shadow: 0 0 20px 0 rgb(62 28 131 / 10%);
+        padding: 10px;
+    }
+}
+
+.input-group.color .input-group-text i {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    right: 6px;
+}
+
+.colorpicker.dropdown-menu {
+    padding: 5px;
+}
+
+/* change z-index when opened in modal */
+.modal-open .colorpicker {
+    z-index: 10055 !important;
+}
