@@ -35,6 +35,11 @@ Botble is a CMS based on Laravel Framework that allows you to build websites for
 - Module Re_write server
 - PHP_CURL Module Enable
 
+# Free plugins
+There are some free plugins available on our Marketplace: https://marketplace.botble.com/products
+
+Those plugins are working fine for products based on Botble CMS.
+
 
 # Demo
 Homepage: https://cms.botble.com  
