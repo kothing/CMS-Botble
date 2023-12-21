@@ -95,9 +95,9 @@ class MarketplaceService
         $core = Core::make();
         $licenseFilePath = $core->getLicenseFilePath();
 
-        if (! File::exists($licenseFilePath)) {
-            throw new RequiresLicenseActivatedException();
-        }
+        // if (! File::exists($licenseFilePath)) {
+        //     throw new RequiresLicenseActivatedException();
+        // }
 
         $data = $this->callApi(
             'post',
