@@ -1,10 +1,10 @@
-import VerifyLicenseComponent from './components/VerifyLicenseComponent.vue'
-import CheckUpdateComponent from './components/CheckUpdateComponent.vue'
+// import VerifyLicenseComponent from './components/VerifyLicenseComponent.vue'
+// import CheckUpdateComponent from './components/CheckUpdateComponent.vue'
 
 if (typeof vueApp !== 'undefined') {
     vueApp.booting((vue) => {
-        vue.component('verify-license-component', VerifyLicenseComponent)
-        vue.component('check-update-component', CheckUpdateComponent)
+        // vue.component('verify-license-component', VerifyLicenseComponent)
+        // vue.component('check-update-component', CheckUpdateComponent)
     })
 }
 

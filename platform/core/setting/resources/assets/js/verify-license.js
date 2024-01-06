@@ -1,7 +1,7 @@
-import LicenseComponent from './components/LicenseComponent.vue'
+// import LicenseComponent from './components/LicenseComponent.vue'
 
-if (typeof vueApp !== 'undefined') {
-    vueApp.booting((vue) => {
-        vue.component('license-component', LicenseComponent)
-    })
-}
+// if (typeof vueApp !== 'undefined') {
+//     vueApp.booting((vue) => {
+//         vue.component('license-component', LicenseComponent)
+//     })
+// }

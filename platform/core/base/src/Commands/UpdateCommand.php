@@ -38,11 +38,11 @@ class UpdateCommand extends Command
 
         $latestUpdate = $this->core->getLatestVersion();
 
-        if (! $latestUpdate) {
-            $this->components->error('Your license is invalid. Please activate your license first.');
+        // if (! $latestUpdate) {
+        //     $this->components->error('Your license is invalid. Please activate your license first.');
 
-            return self::FAILURE;
-        }
+        //     return self::FAILURE;
+        // }
 
         if (version_compare($latestUpdate->version, $this->core->version(), '<=')) {
             if ($this->components->confirm(
@@ -90,11 +90,11 @@ class UpdateCommand extends Command
         $progressBar->start();
 
         try {
-            if (! $this->core->verifyLicense(true)) {
-                $this->errorWithNewLines('Your license is invalid. Please activate your license first.');
+            // if (! $this->core->verifyLicense(true)) {
+            //     $this->errorWithNewLines('Your license is invalid. Please activate your license first.');
 
-                return self::FAILURE;
-            }
+            //     return self::FAILURE;
+            // }
 
             $progressBar->setMessage('Downloading the latest update...');
             $progressBar->advance();

@@ -42,7 +42,7 @@ class SettingController extends BaseController
         Assets::addScripts(['jquery-validation', 'form-validation'])
             ->addScriptsDirectly([
                 'vendor/core/core/setting/js/setting.js',
-                'vendor/core/core/setting/js/verify-license.js',
+                // 'vendor/core/core/setting/js/verify-license.js',
             ])
             ->addStylesDirectly('vendor/core/core/setting/css/setting.css');
 
