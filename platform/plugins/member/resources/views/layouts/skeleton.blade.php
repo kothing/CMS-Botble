@@ -15,13 +15,13 @@
 
   {!! Assets::renderHeader(['core']) !!}
 
-  {!! Html::style('/vendor/core/core/base/css/themes/default.css') !!}
+  {!! Html::style('/vendor/core/base/css/themes/default.css') !!}
 
   <!-- Styles -->
-  <link href="{{ asset('vendor/core/plugins/member/css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/plugins/member/css/app.css') }}" rel="stylesheet">
 
     @if ($isRTL = BaseHelper::isRtlEnabled())
-        <link rel="stylesheet" href="{{ asset('vendor/core/core/base/css/rtl.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/core/base/css/rtl.css') }}">
     @endif
 
   <!-- Put translation key to translate in VueJS -->
@@ -94,7 +94,7 @@
   @endif
 
   <!-- Scripts -->
-  <script src="{{ asset('vendor/core/plugins/member/js/app.js') }}"></script>
+  <script src="{{ asset('vendor/plugins/member/js/app.js') }}"></script>
 
   {!! Assets::renderFooter() !!}
   @stack('scripts')

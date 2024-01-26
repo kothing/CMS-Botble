@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ site_title }}</title>
-    <link rel="stylesheet" href="{{ site_url }}/vendor/core/core/base/css/email.css">
+    <link rel="stylesheet" href="{{ site_url }}/vendor/core/base/css/email.css">
 </head>
 <body style="margin: 0;">
 <table width="100%" id="mainStructure" border="0" cellspacing="0" cellpadding="0"

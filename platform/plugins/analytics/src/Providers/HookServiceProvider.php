@@ -35,12 +35,12 @@ class HookServiceProvider extends ServiceProvider
             Assets::addScripts(['raphael', 'morris'])
                 ->addStyles(['morris'])
                 ->addStylesDirectly([
-                    'vendor/core/plugins/analytics/libraries/jvectormap/jquery-jvectormap-1.2.2.css',
+                    'vendor/plugins/analytics/libraries/jvectormap/jquery-jvectormap-1.2.2.css',
                 ])
                 ->addScriptsDirectly([
-                    'vendor/core/plugins/analytics/libraries/jvectormap/jquery-jvectormap-1.2.2.min.js',
-                    'vendor/core/plugins/analytics/libraries/jvectormap/jquery-jvectormap-world-mill-en.js',
-                    'vendor/core/plugins/analytics/js/analytics.js',
+                    'vendor/plugins/analytics/libraries/jvectormap/jquery-jvectormap-1.2.2.min.js',
+                    'vendor/plugins/analytics/libraries/jvectormap/jquery-jvectormap-world-mill-en.js',
+                    'vendor/plugins/analytics/js/analytics.js',
                 ]);
         }
     }

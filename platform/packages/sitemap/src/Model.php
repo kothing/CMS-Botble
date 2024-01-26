@@ -16,7 +16,7 @@ class Model
 
     protected mixed $useStyles = true;
 
-    protected string $sloc = '/vendor/core/packages/sitemap/styles/';
+    protected string $sloc = '/vendor/packages/sitemap/styles/';
 
     protected bool $useCache = false;
 

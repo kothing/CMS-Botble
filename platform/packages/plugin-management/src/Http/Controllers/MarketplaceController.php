@@ -27,7 +27,7 @@ class MarketplaceController extends Controller
     {
         PageTitle::setTitle(trans('packages/plugin-management::plugin.plugins_add_new'));
 
-        Assets::addScriptsDirectly('vendor/core/packages/plugin-management/js/marketplace.js');
+        Assets::addScriptsDirectly('vendor/packages/plugin-management/js/marketplace.js');
 
         Assets::usingVueJS();
 

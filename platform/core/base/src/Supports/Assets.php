@@ -31,7 +31,7 @@ class Assets extends BaseAssets
 
     public function getThemes(): array
     {
-        $themeFolder = '/vendor/core/core/base/css/themes';
+        $themeFolder = '/vendor/core/base/css/themes';
 
         $themes = ['default' => $themeFolder . '/default.css'];
 

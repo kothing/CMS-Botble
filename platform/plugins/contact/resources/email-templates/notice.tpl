@@ -12,17 +12,17 @@
                                 <tr>
                                     <td align="left" style="padding: 20px 50px;">
                                         <p><strong>Hello, there is a new message for you from your site:</strong></p>
-                                        <p><img src="{{ site_url }}/vendor/core/core/base/images/emails/person.png"
+                                        <p><img src="{{ site_url }}/vendor/core/base/images/emails/person.png"
                                                 alt="From" width="20" style="margin-right: 10px;" /> {{ contact_name }}</p>
-                                        <p><img src="{{ site_url }}/vendor/core/core/base/images/emails/edit.png"
+                                        <p><img src="{{ site_url }}/vendor/core/base/images/emails/edit.png"
                                                 alt="Subject" width="20" style="margin-right: 10px;" /> {{ contact_subject }}</p>
-                                        <p><img src="{{ site_url }}/vendor/core/core/base/images/emails/email.png"
+                                        <p><img src="{{ site_url }}/vendor/core/base/images/emails/email.png"
                                                 alt="Email" width="20" style="margin-right: 10px;" /> {{ contact_email }}</p>
-                                        <p><img src="{{ site_url }}/vendor/core/core/base/images/emails/map.png"
+                                        <p><img src="{{ site_url }}/vendor/core/base/images/emails/map.png"
                                                 alt="Address" width="20" style="margin-right: 10px;" /> {{ contact_address }}</p>
-                                        <p><img src="{{ site_url }}/vendor/core/core/base/images/emails/phone.png"
+                                        <p><img src="{{ site_url }}/vendor/core/base/images/emails/phone.png"
                                                 alt="Phone" width="20" style="margin-right: 10px;" /> {{ contact_phone }}</p>
-                                        <p><img src="{{ site_url }}/vendor/core/core/base/images/emails/message.png"
+                                        <p><img src="{{ site_url }}/vendor/core/base/images/emails/message.png"
                                                 alt="Message" width="20" style="margin-right: 10px;" /> {{ contact_content }}</p>
                                     </td>
                                 </tr>

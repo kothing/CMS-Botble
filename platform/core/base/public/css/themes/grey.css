@@ -1027,7 +1027,7 @@ Customized Bootstrap Modal
   font-size: 13px;
 }
 .modal-header h4 .til_img {
-  background: url("/vendor/core/core/base/images/img.png") repeat scroll -220px -260px transparent;
+  background: url("/vendor/core/base/images/img.png") repeat scroll -220px -260px transparent;
   float: left;
   height: 45px;
   width: 45px;
@@ -1139,7 +1139,7 @@ Customized Bootstrap Modal
   background-size: 50px 50px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image: url("/vendor/core/core/base/images/loader-transparent.svg");
+  background-image: url("/vendor/core/base/images/loader-transparent.svg");
   animation: spin 1s linear infinite;
   width: 50px;
   height: 50px;
@@ -1252,7 +1252,7 @@ Customized Bootstrap Modal
 .user-menu > a {
   padding: 18px 16px;
   display: block;
-  background-image: url("/vendor/core/core/base/images/ui/nav_arrow_right.png") no-repeat 182px;
+  background-image: url("/vendor/core/base/images/ui/nav_arrow_right.png") no-repeat 182px;
   background-color: #2d3a42;
 }
 
@@ -2401,7 +2401,7 @@ Bootstrap Time Picker
   right: 0;
   bottom: 0;
   left: 0;
-  background: #ffffff url("/vendor/core/core/base/images//loading.gif") no-repeat center center;
+  background: #ffffff url("/vendor/core/base/images//loading.gif") no-repeat center center;
   opacity: 0.75;
   filter: alpha(opacity=75);
   z-index: 20140628;
@@ -2465,8 +2465,8 @@ Bootstrap Time Picker
 }
 @font-face {
   font-family: "entypo";
-  src: url("/vendor/core/core/base/fonts/entypo.eot");
-  src: url("/vendor/core/core/base/fonts/entypo.eot?#iefix") format("eot"), url("/vendor/core/core/base/fonts/entypo.woff2") format("woff2"), url("/vendor/core/core/base/fonts/entypo.woff") format("woff"), url("/vendor/core/core/base/fonts/entypo.ttf") format("truetype");
+  src: url("/vendor/core/base/fonts/entypo.eot");
+  src: url("/vendor/core/base/fonts/entypo.eot?#iefix") format("eot"), url("/vendor/core/base/fonts/entypo.woff2") format("woff2"), url("/vendor/core/base/fonts/entypo.woff") format("woff"), url("/vendor/core/base/fonts/entypo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

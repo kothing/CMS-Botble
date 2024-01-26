@@ -133,7 +133,7 @@ class UserController extends BaseController
         $user = User::query()->findOrFail($id);
 
         Assets::addScripts(['bootstrap-pwstrength', 'cropper'])
-            ->addScriptsDirectly('vendor/core/core/acl/js/profile.js');
+            ->addScriptsDirectly('vendor/core/acl/js/profile.js');
 
         PageTitle::setTitle(trans(':name', ['name' => $user->name]));
 

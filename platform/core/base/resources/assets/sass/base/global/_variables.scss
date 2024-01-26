@@ -88,9 +88,9 @@ $screen-sm-max: ($screen-md-min - 1) !default; // 991px
 $screen-md-max: ($screen-lg-min - 1) !default; // 1199px
 
 //## Image  paths
-$general-img-path: '/vendor/core/core/base/images/' !default;
-$page-img-path: '/vendor/core/core/base/images/' !default;
-$plugin-path: '/vendor/core/plugins/' !default;
+$general-img-path: '/vendor/core/base/images/' !default;
+$page-img-path: '/vendor/core/base/images/' !default;
+$plugin-path: '/vendor/plugins/' !default;
 // grid system
 
 $m-layout-breakpoints: (

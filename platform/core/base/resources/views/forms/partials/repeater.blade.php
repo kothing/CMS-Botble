@@ -1,5 +1,5 @@
 @php
-    Assets::addScriptsDirectly('vendor/core/core/base/js/repeater-field.js')
+    Assets::addScriptsDirectly('vendor/core/base/js/repeater-field.js')
     ->usingVueJS();
 
     $group = '';

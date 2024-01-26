@@ -44,8 +44,8 @@ class PublicController extends Controller
         SeoHelper::setTitle($user->name);
 
         Assets::addScriptsDirectly([
-            'vendor/core/plugins/member/libraries/cropper.js',
-            'vendor/core/plugins/member/js/activity-logs.js',
+            'vendor/plugins/member/libraries/cropper.js',
+            'vendor/plugins/member/js/activity-logs.js',
         ]);
 
         Assets::usingVueJS();
@@ -59,7 +59,7 @@ class PublicController extends Controller
 
         $user = auth('member')->user();
 
-        Assets::addScriptsDirectly(['vendor/core/plugins/member/libraries/cropper.js']);
+        Assets::addScriptsDirectly(['vendor/plugins/member/libraries/cropper.js']);
 
         return view('plugins/member::settings.index', compact('user'));
     }

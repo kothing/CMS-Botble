@@ -45,8 +45,8 @@ class CategoryController extends BaseController
             return $response->setData($data);
         }
 
-        Assets::addStylesDirectly(['vendor/core/core/base/css/tree-category.css'])
-            ->addScriptsDirectly(['vendor/core/core/base/js/tree-category.js']);
+        Assets::addStylesDirectly(['vendor/core/base/css/tree-category.css'])
+            ->addScriptsDirectly(['vendor/core/base/js/tree-category.js']);
 
         $form = $formBuilder->create(CategoryForm::class, ['template' => 'core/base::forms.form-tree-category']);
         $form = $this->setFormOptions($form, null, compact('categories'));

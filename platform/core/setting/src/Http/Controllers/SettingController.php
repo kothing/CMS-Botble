@@ -41,10 +41,10 @@ class SettingController extends BaseController
 
         Assets::addScripts(['jquery-validation', 'form-validation'])
             ->addScriptsDirectly([
-                'vendor/core/core/setting/js/setting.js',
-                // 'vendor/core/core/setting/js/verify-license.js',
+                'vendor/core/setting/js/setting.js',
+                // 'vendor/core/setting/js/verify-license.js',
             ])
-            ->addStylesDirectly('vendor/core/core/setting/css/setting.css');
+            ->addStylesDirectly('vendor/core/setting/css/setting.css');
 
         Assets::usingVueJS();
 
@@ -116,8 +116,8 @@ class SettingController extends BaseController
     {
         PageTitle::setTitle(trans('core/base::layouts.setting_email'));
 
-        Assets::addScriptsDirectly('vendor/core/core/setting/js/setting.js')
-            ->addStylesDirectly('vendor/core/core/setting/css/setting.css')
+        Assets::addScriptsDirectly('vendor/core/setting/js/setting.js')
+            ->addStylesDirectly('vendor/core/setting/css/setting.css')
             ->addScripts(['jquery-validation', 'form-validation']);
 
         $jsValidation = JsValidator::formRequest(EmailSettingRequest::class);
@@ -139,17 +139,17 @@ class SettingController extends BaseController
         PageTitle::setTitle(trans(config($type . '.' . $module . '.email.templates.' . $template . '.title', '')));
 
         Assets::addStylesDirectly([
-            'vendor/core/core/base/libraries/codemirror/lib/codemirror.css',
-            'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.css',
-            'vendor/core/core/setting/css/setting.css',
+            'vendor/core/base/libraries/codemirror/lib/codemirror.css',
+            'vendor/core/base/libraries/codemirror/addon/hint/show-hint.css',
+            'vendor/core/setting/css/setting.css',
         ])
             ->addScriptsDirectly([
-                'vendor/core/core/base/libraries/codemirror/lib/codemirror.js',
-                'vendor/core/core/base/libraries/codemirror/lib/css.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/css-hint.js',
-                'vendor/core/core/setting/js/setting.js',
+                'vendor/core/base/libraries/codemirror/lib/codemirror.js',
+                'vendor/core/base/libraries/codemirror/lib/css.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/show-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/css-hint.js',
+                'vendor/core/setting/js/setting.js',
             ]);
 
         $emailContent = get_setting_email_template_content($type, $module, $template);
@@ -236,8 +236,8 @@ class SettingController extends BaseController
     {
         PageTitle::setTitle(trans('core/setting::setting.media.title'));
 
-        Assets::addScriptsDirectly('vendor/core/core/setting/js/setting.js')
-            ->addStylesDirectly('vendor/core/core/setting/css/setting.css')
+        Assets::addScriptsDirectly('vendor/core/setting/js/setting.js')
+            ->addStylesDirectly('vendor/core/setting/css/setting.css')
             ->addScripts(['jquery-validation', 'form-validation']);
 
         $folderIds = json_decode((string)setting('media_folders_can_add_watermark'), true);
@@ -467,7 +467,7 @@ class SettingController extends BaseController
     {
         PageTitle::setTitle(trans('core/setting::setting.cronjob.name'));
 
-        Assets::addScriptsDirectly('vendor/core/core/setting/js/setting.js');
+        Assets::addScriptsDirectly('vendor/core/setting/js/setting.js');
 
         $command = sprintf(
             '* * * * * cd %s && %s >> /dev/null 2>&1',

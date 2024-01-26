@@ -1,6 +1,6 @@
 @php
     Assets::addScriptsDirectly(config('core.base.general.editor.ckeditor.js'))
-        ->addScriptsDirectly('vendor/core/core/base/js/editor.js');
+        ->addScriptsDirectly('vendor/core/base/js/editor.js');
 
     if (BaseHelper::getRichEditor() == 'ckeditor' && App::getLocale() != 'en') {
         Assets::addScriptsDirectly('https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/translations/' . App::getLocale() . '.js');

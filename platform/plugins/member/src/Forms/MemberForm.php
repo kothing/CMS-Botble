@@ -13,7 +13,7 @@ class MemberForm extends FormAbstract
 {
     public function buildForm(): void
     {
-        Assets::addScriptsDirectly(['/vendor/core/plugins/member/js/member-admin.js']);
+        Assets::addScriptsDirectly(['/vendor/plugins/member/js/member-admin.js']);
 
         $this
             ->setupModel(new Member())

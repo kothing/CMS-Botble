@@ -28,7 +28,7 @@ class HookServiceProvider extends ServiceProvider
             return $widgets;
         }
 
-        Assets::addScriptsDirectly(['vendor/core/plugins/request-log/js/request-log.js']);
+        Assets::addScriptsDirectly(['vendor/plugins/request-log/js/request-log.js']);
 
         return (new DashboardWidgetInstance())
             ->setPermission('request-log.index')

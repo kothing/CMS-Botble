@@ -33,7 +33,7 @@ class CustomFieldController extends BaseController
     {
         PageTitle::setTitle(trans('plugins/custom-field::base.page_title'));
 
-        Assets::addScriptsDirectly('vendor/core/plugins/custom-field/js/import-field-group.js')
+        Assets::addScriptsDirectly('vendor/plugins/custom-field/js/import-field-group.js')
             ->addScripts(['blockui']);
 
         return $dataTable->renderTable();
@@ -44,10 +44,10 @@ class CustomFieldController extends BaseController
         PageTitle::setTitle(trans('plugins/custom-field::base.form.create_field_group'));
 
         Assets::addStylesDirectly([
-            'vendor/core/plugins/custom-field/css/custom-field.css',
-            'vendor/core/plugins/custom-field/css/edit-field-group.css',
+            'vendor/plugins/custom-field/css/custom-field.css',
+            'vendor/plugins/custom-field/css/edit-field-group.css',
         ])
-            ->addScriptsDirectly('vendor/core/plugins/custom-field/js/edit-field-group.js')
+            ->addScriptsDirectly('vendor/plugins/custom-field/js/edit-field-group.js')
             ->addScripts(['jquery-ui']);
 
         return $formBuilder->create(CustomFieldForm::class)->renderForm();
@@ -74,10 +74,10 @@ class CustomFieldController extends BaseController
     public function edit(int|string $id, FormBuilder $formBuilder)
     {
         Assets::addStylesDirectly([
-            'vendor/core/plugins/custom-field/css/custom-field.css',
-            'vendor/core/plugins/custom-field/css/edit-field-group.css',
+            'vendor/plugins/custom-field/css/custom-field.css',
+            'vendor/plugins/custom-field/css/edit-field-group.css',
         ])
-            ->addScriptsDirectly('vendor/core/plugins/custom-field/js/edit-field-group.js')
+            ->addScriptsDirectly('vendor/plugins/custom-field/js/edit-field-group.js')
             ->addScripts(['jquery-ui']);
 
         $fieldGroup = $this->fieldGroupRepository->findOrFail($id);

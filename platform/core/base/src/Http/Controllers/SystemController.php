@@ -30,8 +30,8 @@ class SystemController extends Controller
     {
         PageTitle::setTitle(trans('core/base::system.info.title'));
 
-        Assets::addScriptsDirectly('vendor/core/core/base/js/system-info.js')
-            ->addStylesDirectly(['vendor/core/core/base/css/system-info.css']);
+        Assets::addScriptsDirectly('vendor/core/base/js/system-info.js')
+            ->addStylesDirectly(['vendor/core/base/css/system-info.css']);
 
         $composerArray = SystemManagement::getComposerArray();
         $packages = SystemManagement::getPackagesAndDependencies($composerArray['require']);
@@ -66,7 +66,7 @@ class SystemController extends Controller
     {
         PageTitle::setTitle(trans('core/base::cache.cache_management'));
 
-        Assets::addScriptsDirectly('vendor/core/core/base/js/cache.js');
+        Assets::addScriptsDirectly('vendor/core/base/js/cache.js');
 
         return view('core/base::system.cache');
     }
@@ -170,7 +170,7 @@ class SystemController extends Controller
 
         header('Cache-Control: no-cache');
 
-        Assets::addScriptsDirectly('vendor/core/core/base/js/system-update.js');
+        Assets::addScriptsDirectly('vendor/core/base/js/system-update.js');
         Assets::usingVueJS();
 
         BaseHelper::maximumExecutionTimeAndMemoryLimit();
@@ -259,7 +259,7 @@ class SystemController extends Controller
     ): BaseHttpResponse|View {
         PageTitle::setTitle(trans('core/base::system.cleanup.title'));
 
-        Assets::addScriptsDirectly('vendor/core/core/base/js/cleanup.js');
+        Assets::addScriptsDirectly('vendor/core/base/js/cleanup.js');
 
         try {
             $tables = DB::connection()->getDoctrineSchemaManager()->listTableNames();

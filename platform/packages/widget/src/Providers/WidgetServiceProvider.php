@@ -94,7 +94,7 @@ class WidgetServiceProvider extends ServiceProvider
                     return $html;
                 }
 
-                return $html . Html::style('vendor/core/packages/theme/css/guideline.css');
+                return $html . Html::style('vendor/packages/theme/css/guideline.css');
             }, 16);
         });
 

@@ -14,8 +14,8 @@ class ApiController extends Controller
     {
         PageTitle::setTitle(trans('packages/api::api.settings'));
 
-        Assets::addScriptsDirectly('vendor/core/core/setting/js/setting.js');
-        Assets::addStylesDirectly('vendor/core/core/setting/css/setting.css');
+        Assets::addScriptsDirectly('vendor/core/setting/js/setting.js');
+        Assets::addStylesDirectly('vendor/core/setting/css/setting.css');
 
         return view('packages/api::settings');
     }

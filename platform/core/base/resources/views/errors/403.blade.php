@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <title>{{ __('An Error Occurred: Internal Server Error') }}</title>
-    <link rel="stylesheet" href="{{ asset('vendor/core/core/base/css/error-pages.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/core/base/css/error-pages.css') }}">
 </head>
 <body>
 <div class="container">

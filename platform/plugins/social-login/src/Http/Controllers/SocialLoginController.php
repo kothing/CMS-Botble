@@ -160,7 +160,7 @@ class SocialLoginController extends BaseController
     {
         PageTitle::setTitle(trans('plugins/social-login::social-login.settings.title'));
 
-        Assets::addScriptsDirectly('vendor/core/plugins/social-login/js/social-login.js');
+        Assets::addScriptsDirectly('vendor/plugins/social-login/js/social-login.js');
 
         return view('plugins/social-login::settings');
     }

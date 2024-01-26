@@ -81,8 +81,8 @@ class LanguageServiceProvider extends ServiceProvider
                     'permissions' => ['languages.index'],
                 ]);
 
-                Assets::addScriptsDirectly('vendor/core/plugins/language/js/language-global.js')
-                    ->addStylesDirectly(['vendor/core/plugins/language/css/language.css']);
+                Assets::addScriptsDirectly('vendor/plugins/language/js/language-global.js')
+                    ->addStylesDirectly(['vendor/plugins/language/css/language.css']);
             });
 
             $this->app->booted(function () {
@@ -99,7 +99,7 @@ class LanguageServiceProvider extends ServiceProvider
                         ->usePath(false)
                         ->add(
                             'language-css',
-                            asset('vendor/core/plugins/language/css/language-public.css'),
+                            asset('vendor/plugins/language/css/language-public.css'),
                             [],
                             [],
                             '2.2.0'
@@ -110,7 +110,7 @@ class LanguageServiceProvider extends ServiceProvider
                         ->usePath(false)
                         ->add(
                             'language-public-js',
-                            asset('vendor/core/plugins/language/js/language-public.js'),
+                            asset('vendor/plugins/language/js/language-public.js'),
                             ['jquery'],
                             [],
                             '2.2.0'

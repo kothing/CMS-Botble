@@ -4,7 +4,7 @@ const path = require('path')
 let directory = path.basename(path.resolve(__dirname))
 
 const source = 'platform/core/' + directory
-const dist = 'public/vendor/core/core/' + directory
+const dist = 'public/vendor/core/' + directory
 
 mix
     .sass(source + '/resources/assets/sass/media.scss', dist + '/css')

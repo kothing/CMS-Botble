@@ -119,7 +119,7 @@
 
 @if ($canChangeProfile)
     @push('footer')
-        <script type="text/javascript" src="{{ asset('vendor/core/core/js-validation/js/js-validation.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('vendor/core/js-validation/js/js-validation.js')}}"></script>
         {!! JsValidator::formRequest(\Botble\ACL\Http\Requests\UpdateProfileRequest::class, '#profile-form'); !!}
         {!! JsValidator::formRequest(\Botble\ACL\Http\Requests\UpdatePasswordRequest::class, '#password-form'); !!}
     @endpush

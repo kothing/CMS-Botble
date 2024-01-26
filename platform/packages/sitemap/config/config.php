@@ -8,6 +8,6 @@ return [
     'use_limit_size' => false,
     'max_size' => null,
     'use_styles' => true,
-    'styles_location' => '/vendor/core/packages/sitemap/styles/',
+    'styles_location' => '/vendor/packages/sitemap/styles/',
     'use_gzip' => false,
 ];

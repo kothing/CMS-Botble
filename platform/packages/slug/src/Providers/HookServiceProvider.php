@@ -17,8 +17,8 @@ class HookServiceProvider extends ServiceProvider
     public function addSlugBox(string|null $html = null, ?Model $object = null): string|null
     {
         if ($object && SlugHelper::isSupportedModel($class = get_class($object))) {
-            Assets::addScriptsDirectly('vendor/core/packages/slug/js/slug.js')
-                ->addStylesDirectly('vendor/core/packages/slug/css/slug.css');
+            Assets::addScriptsDirectly('vendor/packages/slug/js/slug.js')
+                ->addStylesDirectly('vendor/packages/slug/css/slug.css');
 
             $prefix = SlugHelper::getPrefix($class);
 

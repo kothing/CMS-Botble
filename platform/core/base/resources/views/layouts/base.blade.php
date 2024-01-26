@@ -30,7 +30,7 @@
     </script>
 
     @if (BaseHelper::adminLanguageDirection() == 'rtl')
-        <link rel="stylesheet" href="{{ asset('vendor/core/core/base/css/rtl.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/core/base/css/rtl.css') }}">
     @endif
 
     @yield('head')

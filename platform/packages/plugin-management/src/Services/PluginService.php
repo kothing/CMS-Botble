@@ -174,7 +174,7 @@ class PluginService
             return $validate;
         }
 
-        $pluginPath = public_path('vendor/core/plugins');
+        $pluginPath = public_path('vendor/plugins');
 
         if (! $this->files->isDirectory($pluginPath)) {
             $this->files->makeDirectory($pluginPath, 0755, true);

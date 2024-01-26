@@ -24,8 +24,8 @@ class BackupController extends BaseController
     {
         PageTitle::setTitle(trans('plugins/backup::backup.menu_name'));
 
-        Assets::addScriptsDirectly(['vendor/core/plugins/backup/js/backup.js'])
-            ->addStylesDirectly(['vendor/core/plugins/backup/css/backup.css']);
+        Assets::addScriptsDirectly(['vendor/plugins/backup/js/backup.js'])
+            ->addStylesDirectly(['vendor/plugins/backup/css/backup.css']);
 
         $backupManager = $this->backup;
 

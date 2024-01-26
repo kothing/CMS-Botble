@@ -42,7 +42,7 @@ class LanguageController extends BaseController
     {
         PageTitle::setTitle(trans('plugins/language::language.name'));
 
-        Assets::addScriptsDirectly(['vendor/core/plugins/language/js/language.js']);
+        Assets::addScriptsDirectly(['vendor/plugins/language/js/language.js']);
 
         $languages = Language::getListLanguages();
         $flags = Language::getListLanguageFlags();

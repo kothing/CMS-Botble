@@ -5,7 +5,7 @@ const path = require('path')
 const directory = path.basename(path.resolve(__dirname))
 
 const source = 'platform/packages/' + directory
-const dist = 'public/vendor/core/packages/' + directory
+const dist = 'public/vendor/packages/' + directory
 
 mix
     .sass(source + '/resources/assets/sass/style.scss', dist + '/css', {}, [tailwindcss(source + '/tailwind.config.js')])

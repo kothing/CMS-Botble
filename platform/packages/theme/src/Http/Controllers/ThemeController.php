@@ -36,7 +36,7 @@ class ThemeController extends BaseController
             File::delete(theme_path('.DS_Store'));
         }
 
-        Assets::addScriptsDirectly('vendor/core/packages/theme/js/theme.js');
+        Assets::addScriptsDirectly('vendor/packages/theme/js/theme.js');
 
         return view('packages/theme::list');
     }
@@ -48,10 +48,10 @@ class ThemeController extends BaseController
         Assets::addScripts(['are-you-sure', 'colorpicker', 'jquery-ui'])
             ->addStyles(['colorpicker'])
             ->addStylesDirectly([
-                'vendor/core/packages/theme/css/theme-options.css',
+                'vendor/packages/theme/css/theme-options.css',
             ])
             ->addScriptsDirectly([
-                'vendor/core/packages/theme/js/theme-options.js',
+                'vendor/packages/theme/js/theme-options.js',
             ]);
 
         do_action(RENDERING_THEME_OPTIONS_PAGE);
@@ -101,17 +101,17 @@ class ThemeController extends BaseController
         PageTitle::setTitle(trans('packages/theme::theme.custom_css'));
 
         Assets::addStylesDirectly([
-            'vendor/core/core/base/libraries/codemirror/lib/codemirror.css',
-            'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.css',
-            'vendor/core/packages/theme/css/custom-css.css',
+            'vendor/core/base/libraries/codemirror/lib/codemirror.css',
+            'vendor/core/base/libraries/codemirror/addon/hint/show-hint.css',
+            'vendor/packages/theme/css/custom-css.css',
         ])
             ->addScriptsDirectly([
-                'vendor/core/core/base/libraries/codemirror/lib/codemirror.js',
-                'vendor/core/core/base/libraries/codemirror/lib/css.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/css-hint.js',
-                'vendor/core/packages/theme/js/custom-css.js',
+                'vendor/core/base/libraries/codemirror/lib/codemirror.js',
+                'vendor/core/base/libraries/codemirror/lib/css.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/show-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/css-hint.js',
+                'vendor/packages/theme/js/custom-css.js',
             ]);
 
         return $formBuilder->create(CustomCSSForm::class)->renderForm();
@@ -151,17 +151,17 @@ class ThemeController extends BaseController
         PageTitle::setTitle(trans('packages/theme::theme.custom_js'));
 
         Assets::addStylesDirectly([
-            'vendor/core/core/base/libraries/codemirror/lib/codemirror.css',
-            'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.css',
-            'vendor/core/packages/theme/css/custom-css.css',
+            'vendor/core/base/libraries/codemirror/lib/codemirror.css',
+            'vendor/core/base/libraries/codemirror/addon/hint/show-hint.css',
+            'vendor/packages/theme/css/custom-css.css',
         ])
             ->addScriptsDirectly([
-                'vendor/core/core/base/libraries/codemirror/lib/codemirror.js',
-                'vendor/core/core/base/libraries/codemirror/lib/javascript.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/javascript-hint.js',
-                'vendor/core/packages/theme/js/custom-js.js',
+                'vendor/core/base/libraries/codemirror/lib/codemirror.js',
+                'vendor/core/base/libraries/codemirror/lib/javascript.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/show-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/javascript-hint.js',
+                'vendor/packages/theme/js/custom-js.js',
             ]);
 
         return $formBuilder->create(CustomJSForm::class)->renderForm();
@@ -220,17 +220,17 @@ class ThemeController extends BaseController
         PageTitle::setTitle(trans('packages/theme::theme.custom_html'));
 
         Assets::addStylesDirectly([
-            'vendor/core/core/base/libraries/codemirror/lib/codemirror.css',
-            'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.css',
-            'vendor/core/packages/theme/css/custom-css.css',
+            'vendor/core/base/libraries/codemirror/lib/codemirror.css',
+            'vendor/core/base/libraries/codemirror/addon/hint/show-hint.css',
+            'vendor/packages/theme/css/custom-css.css',
         ])
             ->addScriptsDirectly([
-                'vendor/core/core/base/libraries/codemirror/lib/codemirror.js',
-                'vendor/core/core/base/libraries/codemirror/lib/htmlmixed.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/show-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
-                'vendor/core/core/base/libraries/codemirror/addon/hint/html-hint.js',
-                'vendor/core/packages/theme/js/custom-html.js',
+                'vendor/core/base/libraries/codemirror/lib/codemirror.js',
+                'vendor/core/base/libraries/codemirror/lib/htmlmixed.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/show-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/anyword-hint.js',
+                'vendor/core/base/libraries/codemirror/addon/hint/html-hint.js',
+                'vendor/packages/theme/js/custom-html.js',
             ]);
 
         return $formBuilder->create(CustomHTMLForm::class)->renderForm();

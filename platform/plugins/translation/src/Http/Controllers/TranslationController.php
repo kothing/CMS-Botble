@@ -38,8 +38,8 @@ class TranslationController extends BaseController
 
         Assets::addScripts(['bootstrap-editable'])
             ->addStyles(['bootstrap-editable'])
-            ->addScriptsDirectly('vendor/core/plugins/translation/js/translation.js')
-            ->addStylesDirectly('vendor/core/plugins/translation/css/translation.css');
+            ->addScriptsDirectly('vendor/plugins/translation/js/translation.js')
+            ->addStylesDirectly('vendor/plugins/translation/css/translation.css');
 
         $group = $request->input('group');
 
@@ -139,7 +139,7 @@ class TranslationController extends BaseController
     {
         PageTitle::setTitle(trans('plugins/translation::translation.locales'));
 
-        Assets::addScriptsDirectly('vendor/core/plugins/translation/js/locales.js');
+        Assets::addScriptsDirectly('vendor/plugins/translation/js/locales.js');
 
         $existingLocales = Language::getAvailableLocales();
         $languages = Language::getListLanguages();
@@ -258,8 +258,8 @@ class TranslationController extends BaseController
 
         Assets::addScripts(['bootstrap-editable'])
             ->addStyles(['bootstrap-editable'])
-            ->addScriptsDirectly('vendor/core/plugins/translation/js/theme-translations.js')
-            ->addStylesDirectly('vendor/core/plugins/translation/css/theme-translations.css');
+            ->addScriptsDirectly('vendor/plugins/translation/js/theme-translations.js')
+            ->addStylesDirectly('vendor/plugins/translation/css/theme-translations.css');
 
         $groups = Language::getAvailableLocales();
 

@@ -244,7 +244,7 @@ class HookServiceProvider extends ServiceProvider
                     return $html;
                 }
 
-                return $html . Html::style('vendor/core/packages/theme/css/admin-bar.css') . AdminBar::render();
+                return $html . Html::style('vendor/packages/theme/css/admin-bar.css') . AdminBar::render();
             } catch (Throwable) {
                 return $html;
             }
@@ -261,7 +261,7 @@ class HookServiceProvider extends ServiceProvider
 
                 Theme::asset()
                     ->usePath(false)
-                    ->add('theme-guideline-css', asset('vendor/core/packages/theme/css/guideline.css'));
+                    ->add('theme-guideline-css', asset('vendor/packages/theme/css/guideline.css'));
 
                 $link = view('packages/theme::guideline-link', [
                     'html' => $html,
@@ -278,7 +278,7 @@ class HookServiceProvider extends ServiceProvider
         add_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, function () {
             if (BaseHelper::getRichEditor() === 'ckeditor') {
                 Theme::asset()
-                    ->add('ckeditor-content-styles', 'vendor/core/core/base/libraries/ckeditor/content-styles.css');
+                    ->add('ckeditor-content-styles', 'vendor/core/base/libraries/ckeditor/content-styles.css');
             }
         }, 15);
 

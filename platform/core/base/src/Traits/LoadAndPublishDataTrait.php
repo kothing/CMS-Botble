@@ -138,7 +138,7 @@ trait LoadAndPublishDataTrait
     protected function publishAssets(string $path = null): self
     {
         if (empty($path)) {
-            $path = 'vendor/core/' . $this->getDashedNamespace();
+            $path = 'vendor/' . $this->getDashedNamespace();
         }
 
         $this->publishes([$this->getAssetsPath() => public_path($path)], 'cms-public');

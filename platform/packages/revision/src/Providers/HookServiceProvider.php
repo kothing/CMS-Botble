@@ -18,10 +18,10 @@ class HookServiceProvider extends ServiceProvider
     {
         if (! empty($data) && $this->isSupported($data)) {
             Assets::addScriptsDirectly([
-                '/vendor/core/packages/revision/js/html-diff.js',
-                '/vendor/core/packages/revision/js/revision.js',
+                '/vendor/packages/revision/js/html-diff.js',
+                '/vendor/packages/revision/js/revision.js',
             ])
-                ->addStylesDirectly('/vendor/core/packages/revision/css/revision.css');
+                ->addStylesDirectly('/vendor/packages/revision/css/revision.css');
 
             return $tabs . view('packages/revision::history-tab')->render();
         }

@@ -11,7 +11,7 @@
     </x-slot>
     <div class="get-start-wrapper">
         <div class="text-center">
-            <p><img src="{{ asset('vendor/core/packages/get-started/images/confetti.png') }}" alt="Icon">
+            <p><img src="{{ asset('vendor/packages/get-started/images/confetti.png') }}" alt="Icon">
             </p>
             <br>
             <h4>{{ trans('packages/get-started::get-started.welcome_title') }}</h4>

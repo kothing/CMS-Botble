@@ -105,7 +105,7 @@
   </div>
 @endsection
 @push('scripts')
-  <script type="text/javascript" src="{{ asset('vendor/core/core/js-validation/js/js-validation.js')}}"></script>
+  <script type="text/javascript" src="{{ asset('vendor/core/js-validation/js/js-validation.js')}}"></script>
   {!! JsValidator::formRequest(\Botble\Member\Http\Requests\SettingRequest::class); !!}
   <script type="text/javascript">
       "use strict";

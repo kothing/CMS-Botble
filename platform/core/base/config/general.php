@@ -4,17 +4,17 @@ return [
     'admin_dir' => env('ADMIN_DIR', 'admin'),
     'default-theme' => env('DEFAULT_THEME', 'default'),
     'base_name' => env('APP_NAME', 'Botble Technologies'),
-    'logo' => '/vendor/core/core/base/images/logo_white.png',
-    'favicon' => '/vendor/core/core/base/images/favicon.png',
+    'logo' => '/vendor/core/base/images/logo_white.png',
+    'favicon' => '/vendor/core/base/images/favicon.png',
     'editor' => [
         'ckeditor' => [
             'js' => [
-                '/vendor/core/core/base/libraries/ckeditor/ckeditor.js',
+                '/vendor/core/base/libraries/ckeditor/ckeditor.js',
             ],
         ],
         'tinymce' => [
             'js' => [
-                '/vendor/core/core/base/libraries/tinymce/tinymce.min.js',
+                '/vendor/core/base/libraries/tinymce/tinymce.min.js',
             ],
         ],
         'primary' => env('PRIMARY_EDITOR', 'ckeditor'),

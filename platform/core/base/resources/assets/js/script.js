@@ -30,7 +30,7 @@ class Botble {
                 (options.boxed ? 'loading-message-boxed' : '') +
                 '"><img src="' +
                 window.siteUrl +
-                '/vendor/core/core/base/images/loading-spinner-blue.gif" alt="loading"></div>'
+                '/vendor/core/base/images/loading-spinner-blue.gif" alt="loading"></div>'
         } else if (options.textOnly) {
             html =
                 '<div class="loading-message ' +
@@ -44,7 +44,7 @@ class Botble {
                 (options.boxed ? 'loading-message-boxed' : '') +
                 '"><img src="' +
                 window.siteUrl +
-                '/vendor/core/core/base/images/loading-spinner-blue.gif" alt="loading"><span>&nbsp;&nbsp;' +
+                '/vendor/core/base/images/loading-spinner-blue.gif" alt="loading"><span>&nbsp;&nbsp;' +
                 (options.message ? options.message : 'LOADING...') +
                 '</span></div>'
         }

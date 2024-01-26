@@ -18,16 +18,16 @@ return [
     ],
     'libraries' => [
         'stylesheets' => [
-            'vendor/core/core/media/libraries/jquery-context-menu/jquery.contextMenu.min.css',
-            'vendor/core/core/media/css/media.css?v=' . time(),
+            'vendor/core/media/libraries/jquery-context-menu/jquery.contextMenu.min.css',
+            'vendor/core/media/css/media.css?v=' . time(),
         ],
         'javascript' => [
-            'vendor/core/core/media/libraries/lodash/lodash.min.js',
-            'vendor/core/core/media/libraries/clipboard/clipboard.min.js',
-            'vendor/core/core/media/libraries/dropzone/dropzone.js',
-            'vendor/core/core/media/libraries/jquery-context-menu/jquery.ui.position.min.js',
-            'vendor/core/core/media/libraries/jquery-context-menu/jquery.contextMenu.min.js',
-            'vendor/core/core/media/js/media.js?v=' . time(),
+            'vendor/core/media/libraries/lodash/lodash.min.js',
+            'vendor/core/media/libraries/clipboard/clipboard.min.js',
+            'vendor/core/media/libraries/dropzone/dropzone.js',
+            'vendor/core/media/libraries/jquery-context-menu/jquery.ui.position.min.js',
+            'vendor/core/media/libraries/jquery-context-menu/jquery.contextMenu.min.js',
+            'vendor/core/media/js/media.js?v=' . time(),
         ],
     ],
     'allowed_mime_types' => env(
@@ -62,7 +62,7 @@ return [
             'application/vnd.openxmlformats-officedocument.presentationml.presentation',
         ],
     ],
-    'default_image' => env('RV_MEDIA_DEFAULT_IMAGE', '/vendor/core/core/base/images/placeholder.png'),
+    'default_image' => env('RV_MEDIA_DEFAULT_IMAGE', '/vendor/core/base/images/placeholder.png'),
     'sidebar_display' => env('RV_MEDIA_SIDEBAR_DISPLAY', 'horizontal'), // Use "vertical" or "horizontal"
     'watermark' => [
         'enabled' => env('RV_MEDIA_WATERMARK_ENABLED', 0),

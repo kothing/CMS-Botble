@@ -39,7 +39,7 @@ class CookieConsentServiceProvider extends ServiceProvider
                     ->usePath(false)
                     ->add(
                         'cookie-consent-css',
-                        asset('vendor/core/plugins/cookie-consent/css/cookie-consent.css'),
+                        asset('vendor/plugins/cookie-consent/css/cookie-consent.css'),
                         [],
                         [],
                         '1.0.1'
@@ -49,7 +49,7 @@ class CookieConsentServiceProvider extends ServiceProvider
                     ->usePath(false)
                     ->add(
                         'cookie-consent-js',
-                        asset('vendor/core/plugins/cookie-consent/js/cookie-consent.js'),
+                        asset('vendor/plugins/cookie-consent/js/cookie-consent.js'),
                         ['jquery'],
                         [],
                         '1.0.1'

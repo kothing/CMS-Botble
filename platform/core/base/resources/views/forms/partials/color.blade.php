@@ -7,8 +7,8 @@
 
 @once
     @if (request()->ajax())
-        <script src="{{ asset('vendor/core/core/base/libraries/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js') }}"></script>
-        <link rel="stylesheet" href="{{ asset('vendor/core/core/base/libraries/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
+        <script src="{{ asset('vendor/core/base/libraries/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('vendor/core/base/libraries/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
     @endif
 @endonce
 

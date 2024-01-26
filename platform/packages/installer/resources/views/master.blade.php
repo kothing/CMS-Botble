@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('template_title', trans('packages/installer::installer.title'))</title>
 
-    <link rel="icon" href="{{ asset('vendor/core/core/base/images/favicon.png') }}">
-    <link href="{{ asset('vendor/core/core/base/libraries/font-awesome/css/fontawesome.min.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('vendor/core/packages/installer/css/style.css') }}?v={{ get_cms_version() }}" rel="stylesheet"/>
+    <link rel="icon" href="{{ asset('vendor/core/base/images/favicon.png') }}">
+    <link href="{{ asset('vendor/core/base/libraries/font-awesome/css/fontawesome.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('vendor/packages/installer/css/style.css') }}?v={{ get_cms_version() }}" rel="stylesheet"/>
 
     <link rel="preconnect" href="{{ BaseHelper::getGoogleFontsURL() }}">
     <link href="{{ BaseHelper::getGoogleFontsURL() }}/css?family=Lato:400,700%7cPoppins:200,400,500,700" rel="stylesheet">

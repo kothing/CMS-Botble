@@ -78,7 +78,7 @@ class HookServiceProvider extends ServiceProvider
             return $widgets;
         }
 
-        Assets::addScriptsDirectly('vendor/core/plugins/audit-log/js/audit-log.js');
+        Assets::addScriptsDirectly('vendor/plugins/audit-log/js/audit-log.js');
 
         return (new DashboardWidgetInstance())
             ->setPermission('audit-log.index')

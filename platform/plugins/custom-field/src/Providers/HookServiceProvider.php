@@ -67,10 +67,10 @@ class HookServiceProvider extends ServiceProvider
         }
 
         Assets::addStylesDirectly([
-            'vendor/core/plugins/custom-field/css/custom-field.css',
+            'vendor/plugins/custom-field/css/custom-field.css',
         ])
             ->addScriptsDirectly([
-                'vendor/core/plugins/custom-field/js/use-custom-fields.js',
+                'vendor/plugins/custom-field/js/use-custom-fields.js',
             ])
             ->addScripts(['jquery-ui']);
 

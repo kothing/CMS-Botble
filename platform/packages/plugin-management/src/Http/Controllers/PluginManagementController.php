@@ -27,8 +27,8 @@ class PluginManagementController extends Controller
     {
         PageTitle::setTitle(trans('packages/plugin-management::plugin.plugins'));
 
-        Assets::addScriptsDirectly('vendor/core/packages/plugin-management/js/plugin.js')
-            ->addStylesDirectly('vendor/core/packages/plugin-management/css/plugin.css');
+        Assets::addScriptsDirectly('vendor/packages/plugin-management/js/plugin.js')
+            ->addStylesDirectly('vendor/packages/plugin-management/css/plugin.css');
 
         $list = [];
 
@@ -62,7 +62,7 @@ class PluginManagementController extends Controller
                     $content['path'] = $plugin;
                     $content['image'] = null;
 
-                    $screenshot = 'vendor/core/plugins/' . $plugin . '/screenshot.png';
+                    $screenshot = 'vendor/plugins/' . $plugin . '/screenshot.png';
 
                     if (File::exists(public_path($screenshot))) {
                         $content['image'] = asset($screenshot);

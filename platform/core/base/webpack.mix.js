@@ -5,7 +5,7 @@ const path = require('path')
 let directory = path.basename(path.resolve(__dirname))
 
 const source = 'platform/core/' + directory
-const dist = 'public/vendor/core/core/' + directory
+const dist = 'public/vendor/core/' + directory
 
 glob.sync(source + '/resources/assets/sass/base/themes/*.scss').forEach(
     (item) => mix.sass(item, dist + '/css/themes')

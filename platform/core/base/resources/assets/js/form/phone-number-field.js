@@ -23,7 +23,7 @@ class PhoneNumberField {
                     // placeholderNumberType: "MOBILE",
                     // preferredCountries: ['cn', 'jp'],
                     // separateDialCode: true,
-                    utilsScript: '/vendor/core/core/base/libraries/intl-tel-input/js/utils.js',
+                    utilsScript: '/vendor/core/base/libraries/intl-tel-input/js/utils.js',
                 })
             })
     }

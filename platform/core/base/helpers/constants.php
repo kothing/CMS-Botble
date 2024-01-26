@@ -23,7 +23,7 @@ if (! defined('BASE_ACTION_FORM_ACTIONS_TITLE')) {
 }
 
 if (! defined('BASE_LANGUAGE_FLAG_PATH')) {
-    define('BASE_LANGUAGE_FLAG_PATH', '/vendor/core/core/base/images/flags/');
+    define('BASE_LANGUAGE_FLAG_PATH', '/vendor/core/base/images/flags/');
 }
 
 if (! defined('BASE_FILTER_GROUP_PUBLIC_ROUTE')) {

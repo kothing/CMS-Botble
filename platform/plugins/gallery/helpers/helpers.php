@@ -63,22 +63,22 @@ if (! function_exists('render_object_gallery')) {
             ->usePath(false)
             ->add(
                 'owl.carousel',
-                asset('vendor/core/plugins/gallery/libraries/owl-carousel/owl.carousel.css'),
+                asset('vendor/plugins/gallery/libraries/owl-carousel/owl.carousel.css'),
                 [],
                 [],
                 '1.0.0'
             )
-            ->add('object-gallery-css', asset('vendor/core/plugins/gallery/css/object-gallery.css'), [], [], '1.0.0')
+            ->add('object-gallery-css', asset('vendor/plugins/gallery/css/object-gallery.css'), [], [], '1.0.0')
             ->add(
                 'carousel',
-                asset('vendor/core/plugins/gallery/libraries/owl-carousel/owl.carousel.js'),
+                asset('vendor/plugins/gallery/libraries/owl-carousel/owl.carousel.js'),
                 ['jquery'],
                 [],
                 '1.0.0'
             )
             ->add(
                 'object-gallery-js',
-                asset('vendor/core/plugins/gallery/js/object-gallery.js'),
+                asset('vendor/plugins/gallery/js/object-gallery.js'),
                 ['jquery'],
                 [],
                 '1.0.0'

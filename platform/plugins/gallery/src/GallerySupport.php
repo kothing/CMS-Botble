@@ -119,28 +119,28 @@ class GallerySupport
     {
         Theme::asset()
             ->usePath(false)
-            ->add('lightgallery-css', asset('vendor/core/plugins/gallery/css/lightgallery.min.css'), [], [], '1.0.0')
-            ->add('gallery-css', asset('vendor/core/plugins/gallery/css/gallery.css'), [], [], '1.0.0');
+            ->add('lightgallery-css', asset('vendor/plugins/gallery/css/lightgallery.min.css'), [], [], '1.0.0')
+            ->add('gallery-css', asset('vendor/plugins/gallery/css/gallery.css'), [], [], '1.0.0');
 
         Theme::asset()
             ->container('footer')
             ->usePath(false)
             ->add(
                 'lightgallery-js',
-                asset('vendor/core/plugins/gallery/js/lightgallery.min.js'),
+                asset('vendor/plugins/gallery/js/lightgallery.min.js'),
                 ['jquery'],
                 [],
                 '1.0.0'
             )
             ->add(
                 'imagesloaded',
-                asset('vendor/core/plugins/gallery/js/imagesloaded.pkgd.min.js'),
+                asset('vendor/plugins/gallery/js/imagesloaded.pkgd.min.js'),
                 ['jquery'],
                 [],
                 '1.0.0'
             )
-            ->add('masonry', asset('vendor/core/plugins/gallery/js/masonry.pkgd.min.js'), ['jquery'], [], '1.0.0')
-            ->add('gallery-js', asset('vendor/core/plugins/gallery/js/gallery.js'), ['jquery'], [], '1.0.0');
+            ->add('masonry', asset('vendor/plugins/gallery/js/masonry.pkgd.min.js'), ['jquery'], [], '1.0.0')
+            ->add('gallery-js', asset('vendor/plugins/gallery/js/gallery.js'), ['jquery'], [], '1.0.0');
 
         return $this;
     }

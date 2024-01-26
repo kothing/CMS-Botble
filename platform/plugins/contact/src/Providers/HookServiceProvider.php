@@ -105,14 +105,14 @@ class HookServiceProvider extends ServiceProvider
             $this->app->booted(function () {
                 Theme::asset()
                     ->usePath(false)
-                    ->add('contact-css', asset('vendor/core/plugins/contact/css/contact-public.css'), [], [], '1.0.0');
+                    ->add('contact-css', asset('vendor/plugins/contact/css/contact-public.css'), [], [], '1.0.0');
 
                 Theme::asset()
                     ->container('footer')
                     ->usePath(false)
                     ->add(
                         'contact-public-js',
-                        asset('vendor/core/plugins/contact/js/contact-public.js'),
+                        asset('vendor/plugins/contact/js/contact-public.js'),
                         ['jquery'],
                         [],
                         '1.0.0'
@@ -129,10 +129,10 @@ class HookServiceProvider extends ServiceProvider
 
     public function addSettings(string|null $data = null): string
     {
-        Assets::addStylesDirectly('vendor/core/core/base/libraries/tagify/tagify.css')
+        Assets::addStylesDirectly('vendor/core/base/libraries/tagify/tagify.css')
             ->addScriptsDirectly([
-                'vendor/core/core/base/libraries/tagify/tagify.js',
-                'vendor/core/core/base/js/tags.js',
+                'vendor/core/base/libraries/tagify/tagify.js',
+                'vendor/core/base/js/tags.js',
             ]);
 
         return $data . view('plugins/contact::settings')->render();

@@ -24,5 +24,5 @@
 </div><!-- /.modal -->
 
 @include('core/media::config')
-<link href="{{ asset('vendor/core/core/media/css/media.css?v=' . time()) }}" rel="stylesheet" type="text/css" />
-<script src="{{ asset('vendor/core/core/media/js/integrate.js?v=' . time()) }}"></script>
+<link href="{{ asset('vendor/core/media/css/media.css?v=' . time()) }}" rel="stylesheet" type="text/css" />
+<script src="{{ asset('vendor/core/media/js/integrate.js?v=' . time()) }}"></script>

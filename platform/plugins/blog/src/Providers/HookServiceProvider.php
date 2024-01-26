@@ -202,7 +202,7 @@ class HookServiceProvider extends ServiceProvider
             return $widgets;
         }
 
-        Assets::addScriptsDirectly(['/vendor/core/plugins/blog/js/blog.js']);
+        Assets::addScriptsDirectly(['/vendor/plugins/blog/js/blog.js']);
 
         return (new DashboardWidgetInstance())
             ->setPermission('posts.index')

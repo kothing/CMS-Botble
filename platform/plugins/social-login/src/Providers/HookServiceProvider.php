@@ -35,7 +35,7 @@ class HookServiceProvider extends ServiceProvider
                     ->usePath(false)
                     ->add(
                         'social-login-css',
-                        asset('vendor/core/plugins/social-login/css/social-login.css'),
+                        asset('vendor/plugins/social-login/css/social-login.css'),
                         [],
                         [],
                         '1.1.0'

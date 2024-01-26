@@ -19,7 +19,7 @@ class WidgetController extends BaseController
         PageTitle::setTitle(trans('packages/widget::widget.name'));
 
         Assets::addScripts(['sortable'])
-            ->addScriptsDirectly('vendor/core/packages/widget/js/widget.js');
+            ->addScriptsDirectly('vendor/packages/widget/js/widget.js');
 
         $widgets = Widget::query()->where('theme', Widget::getThemeName())->get();
 

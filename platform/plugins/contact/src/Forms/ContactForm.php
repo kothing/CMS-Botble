@@ -12,8 +12,8 @@ class ContactForm extends FormAbstract
 {
     public function buildForm(): void
     {
-        Assets::addScriptsDirectly('vendor/core/plugins/contact/js/contact.js')
-            ->addStylesDirectly('vendor/core/plugins/contact/css/contact.css');
+        Assets::addScriptsDirectly('vendor/plugins/contact/js/contact.js')
+            ->addStylesDirectly('vendor/plugins/contact/css/contact.css');
 
         $this
             ->setupModel(new Contact())

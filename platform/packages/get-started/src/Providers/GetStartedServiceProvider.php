@@ -23,8 +23,8 @@ class GetStartedServiceProvider extends ServiceProvider
         $this->app->booted(function () {
             add_action(DASHBOARD_ACTION_REGISTER_SCRIPTS, function () {
                 if ($this->shouldShowGetStartedPopup()) {
-                    Assets::addScriptsDirectly('vendor/core/packages/get-started/js/get-started.js')
-                        ->addStylesDirectly('vendor/core/packages/get-started/css/get-started.css')
+                    Assets::addScriptsDirectly('vendor/packages/get-started/js/get-started.js')
+                        ->addStylesDirectly('vendor/packages/get-started/css/get-started.css')
                         ->addScripts(['colorpicker', 'jquery-ui'])
                         ->addStyles(['colorpicker']);
 

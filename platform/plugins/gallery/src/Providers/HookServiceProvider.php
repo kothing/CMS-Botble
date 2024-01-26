@@ -51,8 +51,8 @@ class HookServiceProvider extends ServiceProvider
     public function addGalleryBox(string $context, ?Model $object): void
     {
         if ($object && in_array(get_class($object), Gallery::getSupportedModules()) && $context == 'advanced') {
-            Assets::addStylesDirectly(['vendor/core/plugins/gallery/css/admin-gallery.css'])
-                ->addScriptsDirectly(['vendor/core/plugins/gallery/js/gallery-admin.js'])
+            Assets::addStylesDirectly(['vendor/plugins/gallery/css/admin-gallery.css'])
+                ->addScriptsDirectly(['vendor/plugins/gallery/js/gallery-admin.js'])
                 ->addScripts(['sortable']);
 
             MetaBox::addMetaBox(

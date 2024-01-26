@@ -28,8 +28,8 @@ class ResetPasswordController extends BaseController
         PageTitle::setTitle(trans('core/acl::auth.reset.title'));
 
         Assets::addScripts(['jquery-validation', 'form-validation'])
-            ->addStylesDirectly('vendor/core/core/acl/css/animate.min.css')
-            ->addStylesDirectly('vendor/core/core/acl/css/login.css')
+            ->addStylesDirectly('vendor/core/acl/css/animate.min.css')
+            ->addStylesDirectly('vendor/core/acl/css/login.css')
             ->removeStyles([
                 'select2',
                 'fancybox',

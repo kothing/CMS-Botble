@@ -4,7 +4,7 @@ const path = require('path')
 let directory = path.basename(path.resolve(__dirname))
 
 const source = 'platform/plugins/' + directory
-const dist = 'public/vendor/core/plugins/' + directory
+const dist = 'public/vendor/plugins/' + directory
 
 mix
     .sass(source + '/resources/assets/sass/edit-field-group.scss', dist + '/css')

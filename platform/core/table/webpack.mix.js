@@ -4,7 +4,7 @@ const path = require('path')
 let directory = path.basename(path.resolve(__dirname))
 
 const source = 'platform/core/' + directory
-const dist = 'public/vendor/core/core/' + directory
+const dist = 'public/vendor/core/' + directory
 
 mix
     .js(source + '/resources/assets/js/table.js', dist + '/js')

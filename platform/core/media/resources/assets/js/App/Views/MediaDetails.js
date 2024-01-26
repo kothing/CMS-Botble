@@ -38,7 +38,7 @@ export class MediaDetails {
                                     ? '<div class="input-group"><input id="file_details_url" type="text" value="' +
                                       val +
                                       '" class="form-control"><span class="input-group-text"><button class="btn btn-default js-btn-copy-to-clipboard" type="button" data-clipboard-target="#file_details_url" title="Copied"><img class="clippy" src="' +
-                                      Helpers.asset('/vendor/core/core/media/images/clippy.svg') +
+                                      Helpers.asset('/vendor/core/media/images/clippy.svg') +
                                       '" width="13" alt="Copy to clipboard"></button></span></div>'
                                     : '<span title="' + val + '">' + val + '</span>'
                                 : ''
