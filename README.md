@@ -52,6 +52,10 @@ Follow the steps mentioned below to install and run the project.
 7. Link storage directory: `php artisan storage:link`
 8. You may create a virtualhost entry to access the application or run `php artisan serve` from the project root and visit `http://127.0.0.1:8000`
 
+# Create theme
+You may use the command to a theme:  
+`php artisan cms:theme:create themename`
+
 # Demo
 Homepage: https://cms.botble.com  
 Author login page: https://cms.botble.com/login  
