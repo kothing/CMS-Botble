@@ -25,15 +25,6 @@ _ide_helper_models.php
 _ide_helper.php
 __MACOSX
 
-
-public/vendor/core
-public/themes
-public/docs
-public/mix-manifest.json
-/public/hot
-/public/storage
-
-
 package-lock.json
 yarn.lock
 .phpunit.result.cache

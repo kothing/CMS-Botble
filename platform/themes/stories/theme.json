@@ -1,0 +1,7 @@
+{
+    "name": "Stories",
+    "namespace": "Theme\\Stories\\",
+    "description": "Stories - Personal Blog theme",
+    "author": "Botble Technologies",
+    "required_plugins": []
+}
