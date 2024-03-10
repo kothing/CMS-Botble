@@ -20372,7 +20372,7 @@ h6 .label {
 }
 
 .portlet {
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 25px;
     margin-top: 0;
     padding: 0
@@ -34804,7 +34804,7 @@ table {
 }
 
 .btn {
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
     outline: none;
     padding: 7px 12px
@@ -34994,7 +34994,7 @@ input[disabled] {
 .ui-select-wrapper {
     background: linear-gradient(180deg, #fff, #f9fafb);
     border: 1px solid #c4cdd5;
-    border-radius: 3px !important;
+    border-radius: 4px !important;
     box-shadow: 0 1px 0 0 rgba(22, 29, 37, .05);
     box-sizing: border-box;
     position: relative;
